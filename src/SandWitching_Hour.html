@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8">
+<html data-init="no-js">
+<head>
+<meta charset="UTF-8" />
 <title>SandWitching_Hour</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 <!--
 
 SugarCube (v2.21.0): A free (gratis and libre) story format.
@@ -95,14 +95,14 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 <style id="style-ui" type="text/css">#ui-dialog-body.settings [id|=setting-body]{display:table;width:100%}#ui-dialog-body.settings [id|=setting-label]{display:table-cell;padding:.4em 2em .4em 0}#ui-dialog-body.settings [id|=setting-label]+div{display:table-cell;min-width:8em;text-align:right;vertical-align:middle;white-space:nowrap}#ui-dialog-body.list{padding:0;min-width:140px}#ui-dialog-body.list ul{margin:0;padding:0;list-style:none;border:1px solid transparent}#ui-dialog-body.list li{margin:0}#ui-dialog-body.list li:not(:first-child){border-top:1px solid #444}#ui-dialog-body.list li a{display:block;padding:.25em .75em;border:1px solid transparent;color:#eee;text-decoration:none}#ui-dialog-body.list li a:hover{background-color:#333;border-color:#eee}#ui-dialog-body.saves{padding:0 0 1px}#ui-dialog-body.saves>:not(:first-child){border-top:1px solid #444}#ui-dialog-body.saves table{border-spacing:0;min-width:340px;width:100%}#ui-dialog-body.saves tr:not(:first-child){border-top:1px solid #444}#ui-dialog-body.saves td{padding:.33em .33em}#ui-dialog-body.saves td:first-child{min-width:1.5em;text-align:center}#ui-dialog-body.saves td:nth-child(3){line-height:1.2}#ui-dialog-body.saves td:last-child{text-align:right}#ui-dialog-body.saves .empty{color:#999}#ui-dialog-body.saves .datestamp{font-size:75%}#ui-dialog-body.saves ul.buttons li{padding:.4em}#ui-dialog-body.saves ul.buttons>li+li>button{margin-left:.2em}#ui-dialog-body.saves ul.buttons li:last-child{float:right}#ui-dialog-body.settings div[id|=header-body]{margin:1em 0}#ui-dialog-body.settings div[id|=header-body]:first-child{margin-top:0}#ui-dialog-body.settings div[id|=header-body]:not(:first-child){border-top:1px solid #444;padding-top:1em}#ui-dialog-body.settings div[id|=header-body]>*{margin:0}#ui-dialog-body.settings h2[id|=header-heading]{font-size:1.375em}#ui-dialog-body.settings p[id|=header-label]{font-size:87.5%}#ui-dialog-body.settings div[id|=setting-body]+div[id|=setting-body]{margin:.5em 0}#ui-dialog-body.settings [id|=setting-control]{white-space:nowrap}#ui-dialog-body.settings button[id|=setting-control]{color:#eee;background-color:transparent;border:1px solid #444;padding:.4em}#ui-dialog-body.settings button[id|=setting-control]:hover{background-color:#333;border-color:#eee}#ui-dialog-body.settings button[id|=setting-control].enabled{background-color:#282;border-color:#4a4}#ui-dialog-body.settings button[id|=setting-control].enabled:hover{background-color:#4a4;border-color:#6c6}#ui-dialog-body.share{min-width:140px}#ui-dialog-body.list a,#ui-dialog-body.settings span[id|=setting-input]{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#ui-dialog-body.saves button[id=saves-clear]:before,#ui-dialog-body.saves button[id=saves-export]:before,#ui-dialog-body.saves button[id=saves-import]:before,#ui-dialog-body.settings button[id|=setting-control].enabled:after,#ui-dialog-body.settings button[id|=setting-control]:after{font-family:tme-fa-icons;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;speak:none}#ui-dialog-body.saves button[id=saves-export]:before{content:"\e829\00a0"}#ui-dialog-body.saves button[id=saves-import]:before{content:"\e82a\00a0"}#ui-dialog-body.saves button[id=saves-clear]:before{content:"\e827\00a0"}#ui-dialog-body.settings button[id|=setting-control]:after{content:"\00a0\00a0\e830"}#ui-dialog-body.settings button[id|=setting-control].enabled:after{content:"\00a0\00a0\e831"}</style>
 <style id="style-ui-bar" type="text/css">#story{margin-left:20em}#ui-bar.stowed~#story{margin-left:4.5em}@media screen and (max-width:1136px){#story{margin-left:19em}#ui-bar.stowed~#story{margin-left:3.5em}}@media screen and (max-width:768px){#story{margin-left:3.5em}}#ui-bar{position:fixed;z-index:50;top:0;left:0;width:17.5em;height:100%;margin:0;padding:0;-webkit-transition:left .2s ease-in;-o-transition:left .2s ease-in;transition:left .2s ease-in}#ui-bar.stowed{left:-15.5em}#ui-bar-body{height:90%;height:calc(100% - 2.5em);margin:2.5em 0;padding:0 1.5em}#ui-bar.stowed #ui-bar-body,#ui-bar.stowed #ui-bar-history{visibility:hidden;-webkit-transition:visibility .2s step-end;-o-transition:visibility .2s step-end;transition:visibility .2s step-end}#ui-bar{background-color:#222;border-right:1px solid #444;text-align:center}#ui-bar-tray{position:absolute;top:.2em;left:0;right:0}#ui-bar a{text-decoration:none}#ui-bar hr{border-color:#444}#ui-bar-history [id|=history],#ui-bar-toggle{font-size:1.2em;line-height:inherit;color:#eee;background-color:transparent;border:1px solid #444}#ui-bar-toggle{display:block;position:absolute;top:0;right:0;border-right:none;padding:.3em .45em .25em}#ui-bar.stowed #ui-bar-toggle{padding:.3em .35em .25em .55em}#ui-bar-toggle:hover{background-color:#444;border-color:#eee}#ui-bar-history{margin:0 auto}#ui-bar-history [id|=history]{padding:.2em .45em .35em}#ui-bar-history #history-jumpto{padding:.2em .665em .35em}#ui-bar-history [id|=history]:not(:first-child){margin-left:1.2em}#ui-bar-history [id|=history]:hover{background-color:#444;border-color:#eee}#ui-bar-history [id|=history]:disabled{color:#444;background-color:transparent;border-color:#444}#ui-bar-body{line-height:1.5;overflow:auto}#ui-bar-body>:not(:first-child){margin-top:2em}#story-title{margin:0;font-size:162.5%}#story-author{margin-top:2em;font-weight:700}#menu ul{margin:1em 0 0;padding:0;list-style:none;border:1px solid #444}#menu ul:empty{display:none}#menu li{margin:0}#menu li:not(:first-child){border-top:1px solid #444}#menu li a{display:block;padding:.25em .75em;border:1px solid transparent;color:#eee;text-transform:uppercase}#menu li a:hover{background-color:#444;border-color:#eee}#menu a,#ui-bar-history [id|=history],#ui-bar-toggle{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#menu-core li[id|=menu-item] a:before,#ui-bar-history [id|=history],#ui-bar-toggle:before{font-family:tme-fa-icons;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;speak:none}#ui-bar-toggle:before{content:"\e81d"}#ui-bar.stowed #ui-bar-toggle:before{content:"\e81e"}#menu-item-saves a:before{content:"\e82b\00a0"}#menu-item-settings a:before{content:"\e82d\00a0"}#menu-item-restart a:before{content:"\e82c\00a0"}#menu-item-share a:before{content:"\e82f\00a0"}</style>
 <style id="style-debugview" type="text/css">#ui-bar-body>#debug-view-toggle:first-child{margin-top:1em}#ui-bar-body>#debug-view-toggle:first-child+*{margin-top:1em}#debug-view-toggle{text-transform:uppercase}#debug-view-toggle:after,#debug-view-toggle:before{font-family:tme-fa-icons;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;speak:none}#debug-view-toggle:before{content:"\e838\00a0"}html:not([data-debug-view]) #debug-view-toggle{color:#eee;background-color:transparent;border:1px solid #444;padding:.4em}html:not([data-debug-view]) #debug-view-toggle:hover{background-color:#333;border-color:#eee}html:not([data-debug-view]) #debug-view-toggle:after{content:"\00a0\00a0\e830"}html[data-debug-view] #debug-view-toggle{background-color:#282;border-color:#4a4}html[data-debug-view] #debug-view-toggle:hover{background-color:#4a4;border-color:#6c6}html[data-debug-view] #debug-view-toggle:after{content:"\00a0\00a0\e831"}html[data-debug-view] .debug{padding:.25em;background-color:#234}html[data-debug-view] .debug[title]{cursor:help}html[data-debug-view] .debug.block{display:inline-block;vertical-align:middle}html[data-debug-view] .debug.invalid{text-decoration:line-through}html[data-debug-view] .debug.hidden,html[data-debug-view] .debug.hidden .debug{background-color:#555}html:not([data-debug-view]) .debug.hidden{display:none}html[data-debug-view] .debug[data-name][data-type].nonvoid:after,html[data-debug-view] .debug[data-name][data-type]:before{background-color:rgba(0,0,0,.25);font-family:monospace,monospace;white-space:pre}html[data-debug-view] .debug[data-name][data-type]:before{content:attr(data-name)}html[data-debug-view] .debug[data-name][data-type|=macro]:before{content:"<<" attr(data-name) ">>"}html[data-debug-view] .debug[data-name][data-type|=macro].nonvoid:after{content:"<</" attr(data-name) ">>"}html[data-debug-view] .debug[data-name][data-type|=html]:before{content:"<" attr(data-name) ">"}html[data-debug-view] .debug[data-name][data-type|=html].nonvoid:after{content:"</" attr(data-name) ">"}html[data-debug-view] .debug[data-name][data-type]:not(:empty):before{margin-right:.25em}html[data-debug-view] .debug[data-name][data-type].nonvoid:not(:empty):after{margin-left:.25em}html[data-debug-view] .debug[data-name][data-type|=special],html[data-debug-view] .debug[data-name][data-type|=special]:before{display:block}</style>
-<style id="style-aria-outlines" type="text/css">*:focus{outline:none}</style><style id="style-story" type="text/css"></style></head>
+</head>
 <body>
 	<div id="init-screen">
-		
-		
-		<div id="init-loading"><div>Loading…</div></div>
+		<div id="init-no-js"><noscript>JavaScript is required. Please enable it to continue.</noscript></div>
+		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
+		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<div id="ui-overlay" class="ui-close"></div><div id="ui-dialog" tabindex="0" role="dialog" aria-labelledby="ui-dialog-title"><div id="ui-dialog-titlebar"><h1 id="ui-dialog-title"></h1><button id="ui-dialog-close" class="ui-close" tabindex="0" aria-label="Close"></button></div><div id="ui-dialog-body"></div></div><div id="ui-bar" class="stowed"><div id="ui-bar-tray"><button id="ui-bar-toggle" tabindex="0" title="Toggle the UI bar" aria-label="Toggle the UI bar" type="button"></button><div id="ui-bar-history"><button id="history-backward" tabindex="0" title="Go backward within the game history" aria-label="Go backward within the game history" disabled="disabled" type="button"></button><button id="history-forward" tabindex="0" title="Go forward within the game history" aria-label="Go forward within the game history" disabled="disabled" type="button"></button></div></div><div id="ui-bar-body"><header id="title" role="banner"><div id="story-banner"></div><h1 id="story-title">SandWitching_Hour</h1><div id="story-subtitle"></div><div id="story-title-separator"></div><p id="story-author"></p></header><nav id="menu" role="navigation"><ul id="menu-core"><li id="menu-item-saves"><a tabindex="0">Saves</a></li><li id="menu-item-restart"><a tabindex="0">Restart</a></li></ul></nav></div></div><div id="story" role="main" class=""><div id="passages"><div id="passage-sandwitching-hour" data-passage="SandWitching Hour" class="passage">—SANDWITCHING HOUR—<br><br><a data-passage="New Game" class="link-internal" tabindex="0">New Game</a><br><br><a data-passage="Credits" class="link-internal" tabindex="0">Credits</a><br></div></div></div><div id="store-area" hidden=""><tw-storydata name="SandWitching_Hour" startnode="1" creator="Twine" creator-version="2.2.1" ifid="9ED8388E-6B52-49AB-AC04-33034546419F" zoom="1" format="SugarCube" format-version="2.21.0" options="" hidden=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+	<div id="store-area" hidden><tw-storydata name="SandWitching_Hour" startnode="1" creator="Twine" creator-version="2.2.1" ifid="9ED8388E-6B52-49AB-AC04-33034546419F" zoom="1" format="SugarCube" format-version="2.21.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
@@ -115,73 +115,58 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 A pan is still on the stove. The bacon grease has solidified into a white paste along the bottom. Charming.
 
-The fridge looms closer. It hums, gurgles, whispers sweet... somethings. You can't quite hear.
+The fridge looms closer. It hums, gurgles, whispers sweet... somethings. You can&#39;t quite hear.
 
 [[Wash the dishes]]
 [[Inspect the fridge|Lean closer to the fridge]]
-[[Turn off the light]]</tw-passagedata><tw-passagedata pid="3" name="Phone battery: 8%" tags="" position="256.6666666666667,106" size="100,100">Phone
- battery: 8%
-The red logo of the Hongry App is so bright. Something about it is 
-tantalizing, hypnotizing, salivating. Wait, that last one's you. 
+[[Turn off the light]]</tw-passagedata><tw-passagedata pid="3" name="Phone battery: 8%" tags="" position="256.6666666666667,106" size="100,100">Phone battery: 8%
+The red logo of the Hongry App is so bright. Something about it is tantalizing, hypnotizing, salivating. Wait, that last one&#39;s you. 
 
-It promises you riches, meals beyond your ability to comprehend. You see
- laid before you this sleek, effortless lifestyle. Imagine.
+It promises you riches, meals beyond your ability to comprehend. You see laid before you this sleek, effortless lifestyle. Imagine.
 
-[[Mikey-Wikey's Pizzeria|Mikey's Pizza]]
+[[Mikey-Wikey&#39;s Pizzeria|Mikey&#39;s Pizza]]
 [[Lucky Break Chinese]]
 [[Thaime for Thai]]
-[[Taco Taquiera|Oaxaca Taquiera]] </tw-passagedata><tw-passagedata pid="4" name="A dark street, 14 floors below" tags="" position="888,529" size="100,100">A
- dark street, 14 floors below.
+[[Taco Taquiera|Oaxaca Taquiera]] </tw-passagedata><tw-passagedata pid="4" name="A dark street, 14 floors below" tags="" position="888,529" size="100,100">A dark street, 14 floors below.
 
-There's the bodega on the corner, lit up with white LEDs and animated 
-slogans bright enough to hurt your eyes from here. Something about it 
-seems to call to you. You start to think that you've never seen anything
- more beautiful in your life.
+There&#39;s the bodega on the corner, lit up with white LEDs and animated slogans bright enough to hurt your eyes from here. Something about it seems to call to you. You start to think that you&#39;ve never seen anything more beautiful in your life.
 
 And the guy who knows your order is probably on his shift. 
 
 [[Shamble over to the bodega]]
-</tw-passagedata><tw-passagedata pid="5" name="Shamble over to the bodega" tags="" position="508.6666666666666,1108.6666666666667" size="100,100">You
- slip on flip flops, even though you're wearing socks. Whatever's easy, 
-right? It's too late for anyone to care anymore. Maybe if you walk 
-confidently enough, everyone will think it's a new trend.
+</tw-passagedata><tw-passagedata pid="5" name="Shamble over to the bodega" tags="" position="508.6666666666666,1108.6666666666667" size="100,100">You slip on flip flops, even though you&#39;re wearing socks. Whatever&#39;s easy, right? It&#39;s too late for anyone to care anymore. Maybe if you walk confidently enough, everyone will think it&#39;s a new trend.
 
-The flashing lights advertize sandwiches, hot coffee, hookahs. You can 
-already taste the roast beef, the chips, the sour straws...
+The flashing lights advertize sandwiches, hot coffee, hookahs. You can already taste the roast beef, the chips, the sour straws...
 
 [[Push the door open]]
-[[Pull the door open]]</tw-passagedata><tw-passagedata pid="6" name="Roll over and go to sleep" tags="" position="2039.3333333333335,330.6666666666667" size="100,100">It's late enough already. You told yourself you wouldn't keep doing this.
+[[Pull the door open]]</tw-passagedata><tw-passagedata pid="6" name="Roll over and go to sleep" tags="" position="2039.3333333333335,330.6666666666667" size="100,100">It&#39;s late enough already. You told yourself you wouldn&#39;t keep doing this.
 
 [[Brush your teeth]]
-[[Burrow under the covers|Go to bed]]</tw-passagedata><tw-passagedata pid="7" name="Brush your teeth" tags="" position="2208.3333333333335,393.6666666666667" size="100,100">Clean. Squeaky. We're getting our life together. Totally. 
+[[Burrow under the covers|Go to bed]]</tw-passagedata><tw-passagedata pid="7" name="Brush your teeth" tags="" position="2208.3333333333335,393.6666666666667" size="100,100">Clean. Squeaky. We&#39;re getting our life together. Totally. 
 
 [[Exit bathroom]]</tw-passagedata><tw-passagedata pid="8" name="Exit bathroom" tags="" position="2399.3333333333335,520.6666666666666" size="100,100">The flickering green kitchen light is still on. It calls... 
 
 [[Go to bed]]
 [[Poke into the kitchen|A fairly dirty Kitchen]]</tw-passagedata><tw-passagedata pid="9" name="Go to bed" tags="" position="1210.3333333333335,931.6666666666666" size="100,100">Sleep takes you fairly quickly
-Strange dreams fly past, but it's hard to remember the details.
+Strange dreams fly past, but it&#39;s hard to remember the details.
 Something about... sandwiches.
 
-[[End]]</tw-passagedata><tw-passagedata pid="10" name="Wash the dishes" tags="" position="1992.3333333333335,771.6666666666666" size="100,100">That
- bacon was delicious earlier today, but now you can't help wrinkling up 
-your nose at the feeling of all that fat sliding around. At least your 
-roommates will hate you less now.
+[[End]]</tw-passagedata><tw-passagedata pid="10" name="Wash the dishes" tags="" position="1992.3333333333335,771.6666666666666" size="100,100">That bacon was delicious earlier today, but now you can&#39;t help wrinkling up your nose at the feeling of all that fat sliding around. At least your roommates will hate you less now.
 
-The fridge still grumbles in the corner. One of these days, it's going 
-to break...
+The fridge still grumbles in the corner. One of these days, it&#39;s going to break...
 
 [[Turn off the light]] 
 
 [[Lean closer to the fridge]] </tw-passagedata><tw-passagedata pid="11" name="Lean closer to the fridge" tags="" position="2157.3333333333335,766.6666666666666" size="100,100">You inch towards to the fridge, craning your head to hear. 
 
-FRIDGE: "Shh..."
+FRIDGE: &quot;Shh...&quot;
 
 [[Step forwards]]
 [[Wait, what?|Wait, what the?]]</tw-passagedata><tw-passagedata pid="12" name="Turn off the light" tags="" position="2324.3333333333335,741.6666666666666" size="100,100">You turn off the lights with a slightly labored flick. The switch sticks a bit. 
-C'mon, that's enough for today.
+C&#39;mon, that&#39;s enough for today.
 
 [[Look out the window|A dark street, 14 floors below]]
-[[Go to bed]] </tw-passagedata><tw-passagedata pid="13" name="Mikey's Pizza" tags="" position="85.66666666666667,289" size="100,100">Mikey-Wikey's Pizzeria 
+[[Go to bed]] </tw-passagedata><tw-passagedata pid="13" name="Mikey&#39;s Pizza" tags="" position="85.66666666666667,289" size="100,100">Mikey-Wikey&#39;s Pizzeria 
 
 Serving Brooklyn since 1982
 
@@ -218,40 +203,34 @@ Free side of plantains with orders over $10.
 [[Add Mole Sauce|add7]]
 [[Add Chips &amp; Guacamole|add7]]
 [[Add Jarritos|add7]]
-</tw-passagedata><tw-passagedata pid="16" name="Step forwards" tags="" position="2114.3333333333335,939.6666666666666" size="100,100">You
- shimmy even closer, your face inches away from the freezer. 
+</tw-passagedata><tw-passagedata pid="16" name="Step forwards" tags="" position="2114.3333333333335,939.6666666666666" size="100,100">You shimmy even closer, your face inches away from the freezer. 
 
-FRIDGE: "Tomatoes, butter, leftovers from Thursday's potluck, wilted 
-green onions, cheese, chicken salad, sliced ham, collard greens, frozen 
-tater tots."
+FRIDGE: &quot;Tomatoes, butter, leftovers from Thursday&#39;s potluck, wilted green onions, cheese, chicken salad, sliced ham, collard greens, frozen tater tots.&quot;
 
-FRIDGE: "Why?"
+FRIDGE: &quot;Why?&quot;
 
 [[Why what?]]
-[[I mean, its a kitchen. You're a fridge. That's kind of the schick.]]
+[[I mean, its a kitchen. You&#39;re a fridge. That&#39;s kind of the schick.]]
 [[Oh no, this is not happening.|Turn away]] </tw-passagedata><tw-passagedata pid="17" name="Wait, what the?" tags="" position="2343.3333333333335,885.6666666666667" size="100,100">You reel back sharply into the doorway.
 
-There's no way that was right. It's time to just stop and shake this all off. God, you're really falling apart already. 
+There&#39;s no way that was right. It&#39;s time to just stop and shake this all off. God, you&#39;re really falling apart already. 
 
 [[Investigate|Step forwards]]
-[[Turn away]]</tw-passagedata><tw-passagedata pid="18" name="Why what?" tags="" position="1956.3333333333335,1050.6666666666667" size="100,100">FRIDGE:
- "Why ...anything, everything? Am I really here to just hold onto these 
-tomatoes you say you'll eat until they go bad, again, in my bottom 
-shelf?"
+[[Turn away]]</tw-passagedata><tw-passagedata pid="18" name="Why what?" tags="" position="1956.3333333333335,1050.6666666666667" size="100,100">FRIDGE: &quot;Why ...anything, everything? Am I really here to just hold onto these tomatoes you say you&#39;ll eat until they go bad, again, in my bottom shelf?&quot;
 
-FRIDGE: "Really? That's my slot in life?"
+FRIDGE: &quot;Really? That&#39;s my slot in life?&quot;
 
-[[I'm sorry. I didn't realize you, uh, thought.]]
+[[I&#39;m sorry. I didn&#39;t realize you, uh, thought.]]
 [[Yeah, I mean. It is.]]
-[[I don't have to take this from a fridge.]] </tw-passagedata><tw-passagedata pid="19" name="I mean, its a kitchen. You're a fridge. That's kind of the schick." tags="" position="2189.3333333333335,1089.6666666666667" size="100,100">The fridge growls.
+[[I don&#39;t have to take this from a fridge.]] </tw-passagedata><tw-passagedata pid="19" name="I mean, its a kitchen. You&#39;re a fridge. That&#39;s kind of the schick." tags="" position="2189.3333333333335,1089.6666666666667" size="100,100">The fridge growls.
 
-FRIDGE: "Is it? Then what's the schtick with you?"
+FRIDGE: &quot;Is it? Then what&#39;s the schtick with you?&quot;
 
-[[I haven't figured that out yet.]]
-[[Listen, I'm just hungry. I'm tired...]]
-[[I don't have to take this from a fridge.]]</tw-passagedata><tw-passagedata pid="20" name="I haven't figured that out yet." tags="" position="1961.3333333333335,1346.6666666666667" size="100,100">FRIDGE: "Well when you figure out what you're about, maybe it'd help to spell it out on some magnets."
+[[I haven&#39;t figured that out yet.]]
+[[Listen, I&#39;m just hungry. I&#39;m tired...]]
+[[I don&#39;t have to take this from a fridge.]]</tw-passagedata><tw-passagedata pid="20" name="I haven&#39;t figured that out yet." tags="" position="1961.3333333333335,1346.6666666666667" size="100,100">FRIDGE: &quot;Well when you figure out what you&#39;re about, maybe it&#39;d help to spell it out on some magnets.&quot;
 
-"I've been dying for some pretty word magnets."
+&quot;I&#39;ve been dying for some pretty word magnets.&quot;
 
 {I } {Am} {...}
  
@@ -270,107 +249,99 @@ FRIDGE: "Is it? Then what's the schtick with you?"
  [[Horny|haha]]
  [[OK|haha]]
  [[Allergic|haha]]
- [[Still Nothing|haha]]</tw-passagedata><tw-passagedata pid="21" name="Listen, I'm just hungry. I'm tired..." tags="" position="2155.3333333333335,1247.6666666666667" size="100,100">FRIDGE: "Aren't we all? Who wants to hear it from you, anyway?"
+ [[Still Nothing|haha]]</tw-passagedata><tw-passagedata pid="21" name="Listen, I&#39;m just hungry. I&#39;m tired..." tags="" position="2155.3333333333335,1247.6666666666667" size="100,100">FRIDGE: &quot;Aren&#39;t we all? Who wants to hear it from you, anyway?&quot;
 ...
-FRIDGE: "You mold growers are all the same."
+FRIDGE: &quot;You mold growers are all the same.&quot;
 
 -*click*-
 
-[[Hello?]]</tw-passagedata><tw-passagedata pid="22" name="I don't have to take this from a fridge." tags="" position="2339.3333333333335,1239.6666666666667" size="100,100">FRIDGE: "Oh, go stick your hand down the toaster."
+[[Hello?]]</tw-passagedata><tw-passagedata pid="22" name="I don&#39;t have to take this from a fridge." tags="" position="2339.3333333333335,1239.6666666666667" size="100,100">FRIDGE: &quot;Oh, go stick your hand down the toaster.&quot;
 
 [[You stick your..]]
 [[Unplug the fridge]]
-[[Leave]]</tw-passagedata><tw-passagedata pid="23" name="I'm sorry. I didn't realize you, uh, thought." tags="" position="1818.3333333333335,1362.3333333333333" size="100,100">FRIDGE:
- "Thought? Man, I FEEL. Have you ever considered that?"
+[[Leave]]</tw-passagedata><tw-passagedata pid="23" name="I&#39;m sorry. I didn&#39;t realize you, uh, thought." tags="" position="1818.3333333333335,1362.3333333333333" size="100,100">FRIDGE: &quot;Thought? Man, I FEEL. Have you ever considered that?&quot;
 
-FRIDGE: "Really, have you ever considered what it's like to have someone
- rummaging around in your insides, just wanting to take, take, take..."
+FRIDGE: &quot;Really, have you ever considered what it&#39;s like to have someone rummaging around in your insides, just wanting to take, take, take...&quot;
 
 [[Well, actually...]]
-</tw-passagedata><tw-passagedata pid="24" name="Yeah, I mean. It is." tags="" position="1963.3333333333335,1175.6666666666667" size="100,100">FRIDGE: "Well what's YOUR slot in life?"
+</tw-passagedata><tw-passagedata pid="24" name="Yeah, I mean. It is." tags="" position="1963.3333333333335,1175.6666666666667" size="100,100">FRIDGE: &quot;Well what&#39;s YOUR slot in life?&quot;
 
-[[I haven't figured that out yet.]]
-[[Listen, I'm just hungry. I'm tired...]]
-[[I don't have to take this from a fridge.]]</tw-passagedata><tw-passagedata pid="25" name="Well, actually..." tags="" position="1793.3333333333335,1508.3333333333333" size="100,100">FRIDGE: "I know, I know..."
+[[I haven&#39;t figured that out yet.]]
+[[Listen, I&#39;m just hungry. I&#39;m tired...]]
+[[I don&#39;t have to take this from a fridge.]]</tw-passagedata><tw-passagedata pid="25" name="Well, actually..." tags="" position="1793.3333333333335,1508.3333333333333" size="100,100">FRIDGE: &quot;I know, I know...&quot;
 
-FRIDGE: "What are we, the two of us? ...I mean, I think I'm gonna cry, seeing you like this."
+FRIDGE: &quot;What are we, the two of us? ...I mean, I think I&#39;m gonna cry, seeing you like this.&quot;
 
 ...
 
-FRIDGE: "Just kidding. I can't cry."
+FRIDGE: &quot;Just kidding. I can&#39;t cry.&quot;
 
-[[I haven't figured that out yet.]] 
-[[Unremarkable, stagnant, aging appliances. At least you're built for something.]]
-[[Things with a purpose.]]</tw-passagedata><tw-passagedata pid="26" name="Unremarkable, stagnant, aging appliances. At least you're built for something." tags="" position="1626.3333333333335,1622.3333333333333" size="100,100">FRIDGE: "And we'll both break one of these days."
+[[I haven&#39;t figured that out yet.]] 
+[[Unremarkable, stagnant, aging appliances. At least you&#39;re built for something.]]
+[[Things with a purpose.]]</tw-passagedata><tw-passagedata pid="26" name="Unremarkable, stagnant, aging appliances. At least you&#39;re built for something." tags="" position="1626.3333333333335,1622.3333333333333" size="100,100">FRIDGE: &quot;And we&#39;ll both break one of these days.&quot;
 
-"What about it?"
+&quot;What about it?&quot;
 
-The fridge doesn't move, but somehow you feel that if it could, it'd be taking a long drag on a cigarette.
+The fridge doesn&#39;t move, but somehow you feel that if it could, it&#39;d be taking a long drag on a cigarette.
 
 [[*shrug*|exactly]]
 [[...|exactly]]
-[[I don't know.|exactly]]
+[[I don&#39;t know.|exactly]]
 
-</tw-passagedata><tw-passagedata pid="27" name="Things with a purpose." tags="" position="1840.3333333333335,1678.3333333333333" size="100,100">FRIDGE: "Oh, how noble of you..."
+</tw-passagedata><tw-passagedata pid="27" name="Things with a purpose." tags="" position="1840.3333333333335,1678.3333333333333" size="100,100">FRIDGE: &quot;Oh, how noble of you...&quot;
 
 You sense a twinge of sass.
 
-FRIDGE: "Well if you've got it all figured out, then, why are you talking to a fridge?"
+FRIDGE: &quot;Well if you&#39;ve got it all figured out, then, why are you talking to a fridge?&quot;
 
 [[I thought you were the one pondering all these life questions.]]
 [[What are you doing, talking to me?]]
 [[I could ask myself the same question.]]
-[[...]]</tw-passagedata><tw-passagedata pid="28" name="Unplug the fridge" tags="" position="2192.3333333333335,1390.6666666666667" size="100,100">You
- scramble for the plug behind the fridge. It's dusty back here, and your
- hand waves through cobwebs as you fumble around. Finally grasping the 
-base of the plug, you rip it out and hit your hand on the back of the 
-fridge.
+[[...]]</tw-passagedata><tw-passagedata pid="28" name="Unplug the fridge" tags="" position="2192.3333333333335,1390.6666666666667" size="100,100">You scramble for the plug behind the fridge. It&#39;s dusty back here, and your hand waves through cobwebs as you fumble around. Finally grasping the base of the plug, you rip it out and hit your hand on the back of the fridge.
 
 CRACK
 -OW GOD-
 WHRRRRR....
 
-The fridge powers down, something clatters inside, and the hum lowers 
-into silence. Your hand pulses with pain. The milk will be funky by 
-morning. 
+The fridge powers down, something clatters inside, and the hum lowers into silence. Your hand pulses with pain. The milk will be funky by morning. 
 
-[[Leave|Turn off the light]] </tw-passagedata><tw-passagedata pid="29" name="Leave" tags="" position="2415.3333333333335,1388.6666666666667" size="100,100">You turn around with a huff. Maybe you've been too much of a doormat recently. Even kitchen appliances seem to be hostile.
+[[Leave|Turn off the light]] </tw-passagedata><tw-passagedata pid="29" name="Leave" tags="" position="2415.3333333333335,1388.6666666666667" size="100,100">You turn around with a huff. Maybe you&#39;ve been too much of a doormat recently. Even kitchen appliances seem to be hostile.
 
 [[Go to bed]] 
 [[Go to the window|A dark street, 14 floors below]]
 
-</tw-passagedata><tw-passagedata pid="30" name="haha" tags="" position="2053.3333333333335,1666.3333333333333" size="100,100">FRIDGE: "We've got ourselves a poet..."
+</tw-passagedata><tw-passagedata pid="30" name="haha" tags="" position="2053.3333333333335,1666.3333333333333" size="100,100">FRIDGE: &quot;We&#39;ve got ourselves a poet...&quot;
 
 -*click*-
 
-[[Hello?]]</tw-passagedata><tw-passagedata pid="31" name="Hello?" tags="" position="2259.3333333333335,1946.3333333333333" size="100,100">The fridge doesn't answer.
+[[Hello?]]</tw-passagedata><tw-passagedata pid="31" name="Hello?" tags="" position="2259.3333333333335,1946.3333333333333" size="100,100">The fridge doesn&#39;t answer.
 
-[[Leave|Turn off the light]]</tw-passagedata><tw-passagedata pid="32" name="I thought you were the one pondering all these life questions." tags="" position="1602.3333333333335,1855.3333333333333" size="100,100">FRIDGE: "Me? Nah, I've got everything figured out."
+[[Leave|Turn off the light]]</tw-passagedata><tw-passagedata pid="32" name="I thought you were the one pondering all these life questions." tags="" position="1602.3333333333335,1855.3333333333333" size="100,100">FRIDGE: &quot;Me? Nah, I&#39;ve got everything figured out.&quot;
 
-FRIDGE: "You, though? You should be anywhere but here."
-
--*click*-
-
-[[Hello?]] </tw-passagedata><tw-passagedata pid="33" name="What are you doing, talking to me?" tags="" position="1745.3333333333335,1912.3333333333333" size="100,100">FRIDGE: "Regretting it."
+FRIDGE: &quot;You, though? You should be anywhere but here.&quot;
 
 -*click*-
 
-[[Hello?]] </tw-passagedata><tw-passagedata pid="34" name="I could ask myself the same question." tags="" position="1871.3333333333335,1910.3333333333333" size="100,100">FRIDGE: "Well I guess you're not enjoying our conversation very much, then."
+[[Hello?]] </tw-passagedata><tw-passagedata pid="33" name="What are you doing, talking to me?" tags="" position="1745.3333333333335,1912.3333333333333" size="100,100">FRIDGE: &quot;Regretting it.&quot;
 
 -*click*-
 
-[[Hello?]] </tw-passagedata><tw-passagedata pid="35" name="..." tags="" position="2019.3333333333335,1777.3333333333333" size="100,100">FRIDGE: "I've got better things to do than sit here talking"
+[[Hello?]] </tw-passagedata><tw-passagedata pid="34" name="I could ask myself the same question." tags="" position="1871.3333333333335,1910.3333333333333" size="100,100">FRIDGE: &quot;Well I guess you&#39;re not enjoying our conversation very much, then.&quot;
+
+-*click*-
+
+[[Hello?]] </tw-passagedata><tw-passagedata pid="35" name="..." tags="" position="2019.3333333333335,1777.3333333333333" size="100,100">FRIDGE: &quot;I&#39;ve got better things to do than sit here talking&quot;
 
 Before you can question anything, you hear a small
 
 -*click*-
 
-[[Hello?]]</tw-passagedata><tw-passagedata pid="36" name="exactly" tags="" position="1487.3333333333335,1767.3333333333333" size="100,100">FRIDGE: "Now you're getting somewhere"
+[[Hello?]]</tw-passagedata><tw-passagedata pid="36" name="exactly" tags="" position="1487.3333333333335,1767.3333333333333" size="100,100">FRIDGE: &quot;Now you&#39;re getting somewhere&quot;
 
 -*wheeze*-
 -*click*-
 
-[[Hello?]] </tw-passagedata><tw-passagedata pid="37" name="add1" tags="" position="25.666666666666668,441" size="100,100">Mikey-Wikey's Pizzeria 
+[[Hello?]] </tw-passagedata><tw-passagedata pid="37" name="add1" tags="" position="25.666666666666668,441" size="100,100">Mikey-Wikey&#39;s Pizzeria 
 
 Serving Brooklyn since 1982.
 
@@ -383,7 +354,7 @@ Serving Brooklyn since 1982.
 [[Add 1 Beef Patty|add2]]
 [[Add 1 Soda|add2]]
 
-[[Checkout]]</tw-passagedata><tw-passagedata pid="38" name="add2" tags="" position="96.66666666666667,647" size="100,100">Mikey-Wikey's Pizzeria 
+[[Checkout]]</tw-passagedata><tw-passagedata pid="38" name="add2" tags="" position="96.66666666666667,647" size="100,100">Mikey-Wikey&#39;s Pizzeria 
 
 Serving Brooklyn since 1982.
 
@@ -402,7 +373,7 @@ Delivery Fees...
 
 Tip...
 
-Ok, that's way too expensive. 
+Ok, that&#39;s way too expensive. 
 
 Maybe if you [[scrounged]] around for some change, you could... 
 
@@ -497,230 +468,183 @@ Free side of plantains with orders over $10.
 [[Add Chips &amp; Guacamole|add8]]
 [[Add Jarritos|add8]]
 
-[[Checkout]] </tw-passagedata><tw-passagedata pid="47" name="Push the door open" tags="" position="150.6666666666666,1176.6666666666665" size="100,100">It
- doesn't move, but you wiggle enough to ring the bell. Just enough to 
-advertize how you don't know how to open a goddamn door.
+[[Checkout]] </tw-passagedata><tw-passagedata pid="47" name="Push the door open" tags="" position="150.6666666666666,1176.6666666666665" size="100,100">It doesn&#39;t move, but you wiggle enough to ring the bell. Just enough to advertize how you don&#39;t know how to open a goddamn door.
 
-Your face is prickling with embarassment, but we're too deep in now. 
-Something like can't get in the way of you and your sandwich.
+Your face is prickling with embarassment, but we&#39;re too deep in now. Something like can&#39;t get in the way of you and your sandwich.
 
-[[Pull the door open]] </tw-passagedata><tw-passagedata pid="48" name="Pull the door open" tags="" position="337,1187" size="100,100">Shelves
- of every dry good and snack imaginable line themselves in rows. The 
-refrigerators make up the back wall, and on the right is the deli 
-counter. You can smell something cooking on the grill.
+[[Pull the door open]] </tw-passagedata><tw-passagedata pid="48" name="Pull the door open" tags="" position="337,1187" size="100,100">Shelves of every dry good and snack imaginable line themselves in rows. The refrigerators make up the back wall, and on the right is the deli counter. You can smell something cooking on the grill.
 
 [[Amble down the shelves]]
 [[Make a beeline for the refrigerator]]
-[[Approach the counter]]</tw-passagedata><tw-passagedata pid="49" name="Amble down the shelves" tags="" position="151.99999999999997,1443.6666666666667" size="100,100">The
- shelves didn't seem odd from the street, but looking now you can see 
-there are only a few items left. They shelves were full, but only with a
- handful of products. The chips aisle has been completely invaded by 
-proongles. The rest of the rows are decked with a smattering of chickpea
- cans coffee bricks. 
+[[Approach the counter]]</tw-passagedata><tw-passagedata pid="49" name="Amble down the shelves" tags="" position="151.99999999999997,1443.6666666666667" size="100,100">The shelves didn&#39;t seem odd from the street, but looking now you can see there are only a few items left. They shelves were full, but only with a handful of products. The chips aisle has been completely invaded by proongles. The rest of the rows are decked with a smattering of chickpea cans coffee bricks. 
 
 [[Take a can of proongles|aisle]]
 [[Take a can of coffee|aisle]]
 [[Take a can of chickpeas|aisle]]
 [[Take nothing|aisle]]
 
-</tw-passagedata><tw-passagedata pid="50" name="Make a beeline for the refrigerator" tags="" position="313.66666666666663,1446.6666666666667" size="100,100">The
- refrigerators are stocked with all sorts of things.
+</tw-passagedata><tw-passagedata pid="50" name="Make a beeline for the refrigerator" tags="" position="313.66666666666663,1446.6666666666667" size="100,100">The refrigerators are stocked with all sorts of things.
 
-There's canned coffees with milk, sodas, energy drinks, tall cans of 
-iced tea, and even kombucha now. You're not sure what that's all about.
+There&#39;s canned coffees with milk, sodas, energy drinks, tall cans of iced tea, and even kombucha now. You&#39;re not sure what that&#39;s all about.
 
 [[Take a coffee|expired]]
 [[Take a soda|expired]]
 [[Take an iced tea|expired]]
 [[Take a bottle of kombucha|expired]]
-</tw-passagedata><tw-passagedata pid="51" name="Approach the counter" tags="" position="455.33333333333326,1428.6666666666667" size="100,100">You
- walk up to the counter, but for the first time in your memory, no one 
-seems to be there. 
+</tw-passagedata><tw-passagedata pid="51" name="Approach the counter" tags="" position="455.33333333333326,1428.6666666666667" size="100,100">You walk up to the counter, but for the first time in your memory, no one seems to be there. 
 
-The lights are on, though, and the smell of a burger cooking means 
-someone's been here recently.
+The lights are on, though, and the smell of a burger cooking means someone&#39;s been here recently.
 
-Maybe he stepped out for a smoke? You can always tell by his eyes that 
-he's a rather big fan of that. Maybe that's why you've always felt that 
-you understood each other, both woozy and sleepless and hungry.
+Maybe he stepped out for a smoke? You can always tell by his eyes that he&#39;s a rather big fan of that. Maybe that&#39;s why you&#39;ve always felt that you understood each other, both woozy and sleepless and hungry.
 
-Maybe if you browse a bit more, he'll be back when you're done.
+Maybe if you browse a bit more, he&#39;ll be back when you&#39;re done.
 
 [[Amble down the shelves]]
 [[Make a beeline for the refrigerator]] 
 
-</tw-passagedata><tw-passagedata pid="52" name="aisle" tags="" position="137.99999999999997,1590.6666666666667" size="100,100">You stumble out of the aisles, confused but still determined. If there's anything sure around here, it's that you're starving.
+</tw-passagedata><tw-passagedata pid="52" name="aisle" tags="" position="137.99999999999997,1590.6666666666667" size="100,100">You stumble out of the aisles, confused but still determined. If there&#39;s anything sure around here, it&#39;s that you&#39;re starving.
 
 [[Approach the counter|Approach the counter2]] 
-[[Make a beeline for the refrigerator]] </tw-passagedata><tw-passagedata pid="53" name="expired" tags="" position="315.66666666666663,1592.6666666666667" size="100,100">A
- quick glance at the drink and you can tell it's expired. Or at least 
-old. It's strangely dusty, battered.
+[[Make a beeline for the refrigerator]] </tw-passagedata><tw-passagedata pid="53" name="expired" tags="" position="315.66666666666663,1592.6666666666667" size="100,100">A quick glance at the drink and you can tell it&#39;s expired. Or at least old. It&#39;s strangely dusty, battered.
 
 The label reads: BEST BY 6/17/79
 
-That can't be right.
+That can&#39;t be right.
 
-Even if the 18 was the year somehow, and the 6 was the month or even the
- day... what would 79 be, other than a year? Even if the numbers were 
-jumbled, '97 would be just as terrible. 
+Even if the 18 was the year somehow, and the 6 was the month or even the day... what would 79 be, other than a year? Even if the numbers were jumbled, &#39;97 would be just as terrible. 
 
-You spend a while staring at the drink. No matter how you slice it, 
-there has to be some kind of mistake.
+You spend a while staring at the drink. No matter how you slice it, there has to be some kind of mistake.
 
 [[Take the drink anyway]]
-[[Leave it in the fridge]]</tw-passagedata><tw-passagedata pid="54" name="Take the drink anyway" tags="" position="201.66666666666663,1755.6666666666667" size="100,100">You'll take your chances. The time is growing later and you're increasingly desperate to get any kind of sugar in your body.
+[[Leave it in the fridge]]</tw-passagedata><tw-passagedata pid="54" name="Take the drink anyway" tags="" position="201.66666666666663,1755.6666666666667" size="100,100">You&#39;ll take your chances. The time is growing later and you&#39;re increasingly desperate to get any kind of sugar in your body.
 
 [[Amble down the shelves]] 
-[[Approach the counter|Approach the counter2]] </tw-passagedata><tw-passagedata pid="55" name="Leave it in the fridge" tags="" position="323.66666666666663,1745.6666666666667" size="100,100">Something's all wrong here.
+[[Approach the counter|Approach the counter2]] </tw-passagedata><tw-passagedata pid="55" name="Leave it in the fridge" tags="" position="323.66666666666663,1745.6666666666667" size="100,100">Something&#39;s all wrong here.
 
 [[Amble down the shelves]] 
-[[Approach the counter|Approach the counter2]] </tw-passagedata><tw-passagedata pid="56" name="Approach the counter2" tags="" position="201.66666666666663,1905.6666666666667" size="100,100">You
- walk up to the counter, and the sandwich guy is there. You're sort of 
-embarassed for not knowing his name after all this time, but you can 
-never think of a normal way to ask for it. Still, you get the sense that
- you're kindred spirits. Whether you're just projecting this or not.... 
-who knows.
+[[Approach the counter|Approach the counter2]] </tw-passagedata><tw-passagedata pid="56" name="Approach the counter2" tags="" position="201.66666666666663,1905.6666666666667" size="100,100">You walk up to the counter, and the sandwich guy is there. You&#39;re sort of embarassed for not knowing his name after all this time, but you can never think of a normal way to ask for it. Still, you get the sense that you&#39;re kindred spirits. Whether you&#39;re just projecting this or not.... who knows.
 
-He's turned facing away from you, looking at the grill though he doesn't
- seem to be cooking anything.
+He&#39;s turned facing away from you, looking at the grill though he doesn&#39;t seem to be cooking anything.
 
 [[Hello?|counter]]
 [[Excuse me...|counter]]
 [[Hey!|counter]]
 [[Knock on the counter|counter]]
 
-</tw-passagedata><tw-passagedata pid="57" name="counter" tags="" position="201.66666666666663,2055.666666666667" size="100,100">He doesn't respond. In fact, he doesn't even move.
+</tw-passagedata><tw-passagedata pid="57" name="counter" tags="" position="201.66666666666663,2055.666666666667" size="100,100">He doesn&#39;t respond. In fact, he doesn&#39;t even move.
 
 [[Hello?|counter1]]
 [[Excuse me...|counter1]]
 [[Hey!|counter1]]
-[[Knock on the counter|counter1]]</tw-passagedata><tw-passagedata pid="58" name="counter1" tags="" position="201.66666666666663,2205.666666666667" size="100,100">He still doesn't respond. You look to see if he has headphones in, but there are none.
+[[Knock on the counter|counter1]]</tw-passagedata><tw-passagedata pid="58" name="counter1" tags="" position="201.66666666666663,2205.666666666667" size="100,100">He still doesn&#39;t respond. You look to see if he has headphones in, but there are none.
 
 [[Hello?|counter2]]
 [[Excuse me...|counter2]]
 [[Hey!|counter2]]
-[[Knock on the counter|counter2]]</tw-passagedata><tw-passagedata pid="59" name="counter2" tags="" position="201.66666666666663,2355.666666666667" size="100,100">He doesn't respond.
+[[Knock on the counter|counter2]]</tw-passagedata><tw-passagedata pid="59" name="counter2" tags="" position="201.66666666666663,2355.666666666667" size="100,100">He doesn&#39;t respond.
 
 [[Hello?|counter3]]
 [[Excuse me...|counter3]]
 [[Hey!|counter3]]
-[[Knock on the counter|counter3]]</tw-passagedata><tw-passagedata pid="60" name="counter3" tags="" position="201.66666666666663,2505.666666666667" size="100,100">He doesn't respond.
+[[Knock on the counter|counter3]]</tw-passagedata><tw-passagedata pid="60" name="counter3" tags="" position="201.66666666666663,2505.666666666667" size="100,100">He doesn&#39;t respond.
 
 [[Hello?|counter3]]
 [[Excuse me...|counter3]]
 [[Hey!|counter3]]
 [[Knock on the counter|counter3]]
 
-[[Leave|exit bodega]]</tw-passagedata><tw-passagedata pid="61" name="exit bodega" tags="" position="201.66666666666663,2655.666666666667" size="100,100">You start to hurry out of the bodega. Something's off here. 
+[[Leave|exit bodega]]</tw-passagedata><tw-passagedata pid="61" name="exit bodega" tags="" position="201.66666666666663,2655.666666666667" size="100,100">You start to hurry out of the bodega. Something&#39;s off here. 
 
 You pass the cash register and
 
 [[Take the snacks anyway]]
-[[Leave them on the counter]]</tw-passagedata><tw-passagedata pid="62" name="Take the snacks anyway" tags="" position="126.66666666666663,2805.666666666667" size="100,100">At least you'll get some food out of this. It's not your fault if they won't even react to people, right?
+[[Leave them on the counter]]</tw-passagedata><tw-passagedata pid="62" name="Take the snacks anyway" tags="" position="126.66666666666663,2805.666666666667" size="100,100">At least you&#39;ll get some food out of this. It&#39;s not your fault if they won&#39;t even react to people, right?
 
 [[Pull the door]]
 [[Push the door]]
-</tw-passagedata><tw-passagedata pid="63" name="Leave them on the counter" tags="" position="276.66666666666663,2805.666666666667" size="100,100">You're not sure what's happening here, but at least you won't steal anything. Keep something normal.
+</tw-passagedata><tw-passagedata pid="63" name="Leave them on the counter" tags="" position="276.66666666666663,2805.666666666667" size="100,100">You&#39;re not sure what&#39;s happening here, but at least you won&#39;t steal anything. Keep something normal.
 
 [[Pull the door]]
 [[Push the door]]</tw-passagedata><tw-passagedata pid="64" name="Pull the door" tags="" position="51.66666666666663,2955.666666666667" size="100,100">Dammit.
 
-[[Push the door]]</tw-passagedata><tw-passagedata pid="65" name="Push the door" tags="" position="264.66666666666663,3015.666666666667" size="100,100">You
- run out onto the sidewalk and look out across the street.
+[[Push the door]]</tw-passagedata><tw-passagedata pid="65" name="Push the door" tags="" position="264.66666666666663,3015.666666666667" size="100,100">You run out onto the sidewalk and look out across the street.
 
-As you round the corner to your apartment, you see a pigeon on the edge 
-of the sidewalk. Something seems [[unnatural]] about it. It's pecking at
- a lone slice of pizza draped over the curb. 
+As you round the corner to your apartment, you see a pigeon on the edge of the sidewalk. Something seems [[unnatural]] about it. It&#39;s pecking at a lone slice of pizza draped over the curb. 
 
-It pinches the crust and then jerks its head around to rip it off, then 
-spasms a bit more to choke it down. It flutters, bobs, and repeats.
+It pinches the crust and then jerks its head around to rip it off, then spasms a bit more to choke it down. It flutters, bobs, and repeats.
 
 You are entranced.
 
 [[Lucky bird...]]
-[[Hurry past it]]</tw-passagedata><tw-passagedata pid="66" name="reflection" tags="" position="1030,4076.666666666667" size="100,100">As
- you finally get back to your room and collapse on your bed, for once 
-there aren't thoughts running around a mile a minute.
+[[Hurry past it]]</tw-passagedata><tw-passagedata pid="66" name="reflection" tags="" position="1030,4076.666666666667" size="100,100">As you finally get back to your room and collapse on your bed, for once there aren&#39;t thoughts running around a mile a minute.
 
 Everything is sort of silent.
 
-There's no use trying to make sense of anything. There's no use in even 
-trying to relay it to yourself- or to anyone else, really. 
+There&#39;s no use trying to make sense of anything. There&#39;s no use in even trying to relay it to yourself- or to anyone else, really. 
 
-You're just here.
+You&#39;re just here.
 
-You're hungry.
+You&#39;re hungry.
 
-You're tired.
+You&#39;re tired.
 
-You're breathing.
+You&#39;re breathing.
 
-[[Sleep|Go to bed]]</tw-passagedata><tw-passagedata pid="67" name="If you're going to lecture me about how everything is already within myself, I'm going to puke." tags="" position="707.6666666666666,3927.666666666667" size="100,100">VOICE: "...Dang, alright, you got me."
+[[Sleep|Go to bed]]</tw-passagedata><tw-passagedata pid="67" name="If you&#39;re going to lecture me about how everything is already within myself, I&#39;m going to puke." tags="" position="707.6666666666666,3927.666666666667" size="100,100">VOICE: &quot;...Dang, alright, you got me.&quot;
 
-"But still, eating so late is unhealthy. So is getting so little sleep. Take care of yourself better. I mean, look at me..."
+&quot;But still, eating so late is unhealthy. So is getting so little sleep. Take care of yourself better. I mean, look at me...&quot;
 
 [[Okay]]
-[[Go home|reflection]]</tw-passagedata><tw-passagedata pid="68" name="Okay" tags="" position="530.6666666666666,4035.666666666667" size="100,100">VOICE: "No really, just go to bed already."
+[[Go home|reflection]]</tw-passagedata><tw-passagedata pid="68" name="Okay" tags="" position="530.6666666666666,4035.666666666667" size="100,100">VOICE: &quot;No really, just go to bed already.&quot;
 
 [[Fine.|reflection]]
-</tw-passagedata><tw-passagedata pid="69" name="hungry" tags="" position="1188,564" size="100,100">Maybe if you just got up, you could do something about it. There's snacks to be had somewhere.
+</tw-passagedata><tw-passagedata pid="69" name="hungry" tags="" position="1188,564" size="100,100">Maybe if you just got up, you could do something about it. There&#39;s snacks to be had somewhere.
  
 [[Boot up some delivery app on your phone|Phone battery: 8%]]
 [[Look out the window|A dark street, 14 floors below]]
 [[Walk to the kitchen|A fairly dirty Kitchen]]
-</tw-passagedata><tw-passagedata pid="70" name="shut up" tags="" position="1035,571" size="100,100">Shut
- up! Your stomach is deafening. Well, not really. Though, your roommate 
-shuffles a little in his sleep. Maybe he's hungry, too. At least he's 
-lucky enough to be dreaming about something. Maybe even about food... 
-infinite food...
+</tw-passagedata><tw-passagedata pid="70" name="shut up" tags="" position="1035,571" size="100,100">Shut up! Your stomach is deafening. Well, not really. Though, your roommate shuffles a little in his sleep. Maybe he&#39;s hungry, too. At least he&#39;s lucky enough to be dreaming about something. Maybe even about food... infinite food...
 [[Lie there and drool|hungry]]
-[[Roll over and go to sleep]]</tw-passagedata><tw-passagedata pid="71" name="scrounged" tags="" position="24,852" size="100,100">You look around at the bottom of [[your bag|money]], in your [[desk drawers|money]], and [[under your bed|money]].</tw-passagedata><tw-passagedata pid="72" name="eggs" tags="" position="226,1022" size="100,100">Eggs
- are great, really. They're so versatile. You could even write a ballad 
-about your immeasurable debt to eggs. There's fried eggs over ramen, 
-omelettes, even poached eggs on toast if you can get it right this time.
- You could declare it Egg Month!
+[[Roll over and go to sleep]]</tw-passagedata><tw-passagedata pid="71" name="scrounged" tags="" position="24,852" size="100,100">You look around at the bottom of [[your bag|money]], in your [[desk drawers|money]], and [[under your bed|money]].</tw-passagedata><tw-passagedata pid="72" name="eggs" tags="" position="226,1022" size="100,100">Eggs are great, really. They&#39;re so versatile. You could even write a ballad about your immeasurable debt to eggs. There&#39;s fried eggs over ramen, omelettes, even poached eggs on toast if you can get it right this time. You could declare it Egg Month!
 
-... Yeah, that's not happening.
+... Yeah, that&#39;s not happening.
 
-[[Never Mind]].</tw-passagedata><tw-passagedata pid="73" name="Never Mind" tags="" position="376,1022" size="100,100">It's just not worth it. Your phone is dying, anyway.
+[[Never Mind]].</tw-passagedata><tw-passagedata pid="73" name="Never Mind" tags="" position="376,1022" size="100,100">It&#39;s just not worth it. Your phone is dying, anyway.
 
 [[Go to bed]]
 [[Look out the window|A dark street, 14 floors below]]
-[[Go to the kitchen|A fairly dirty Kitchen]]</tw-passagedata><tw-passagedata pid="74" name="money" tags="" position="34,967" size="100,100">You've found 43 cents. Hooray.
+[[Go to the kitchen|A fairly dirty Kitchen]]</tw-passagedata><tw-passagedata pid="74" name="money" tags="" position="34,967" size="100,100">You&#39;ve found 43 cents. Hooray.
 
 [[Never Mind]] </tw-passagedata><tw-passagedata pid="75" name="Turn away" tags="" position="2451.3333333333335,1016.6666666666665" size="100,100">
 This building makes the weirdest noises.
 
-[[Turn off the light]] </tw-passagedata><tw-passagedata pid="76" name="Oh no, this is not happening." tags="" position="2079.3333333333335,1089.6666666666665" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="77" name="You stick your.." tags="" position="2305.3333333333335,1390.6666666666667" size="100,100">You: "your... uh.."
+[[Turn off the light]] </tw-passagedata><tw-passagedata pid="76" name="Oh no, this is not happening." tags="" position="2079.3333333333335,1089.6666666666665" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="77" name="You stick your.." tags="" position="2305.3333333333335,1390.6666666666667" size="100,100">You: &quot;your... uh..&quot;
 
-FRIDGE: "Do I believe my lack of ears? Has having no limbs actually- I mean ACTUALLY gotten me somewhere? Ahah! You're a trip."
+FRIDGE: &quot;Do I believe my lack of ears? Has having no limbs actually- I mean ACTUALLY gotten me somewhere? Ahah! You&#39;re a trip.&quot;
 
-FRIDGE: "What are you doing up, anyway?"
+FRIDGE: &quot;What are you doing up, anyway?&quot;
 
-[[I don't know anymore.| I haven't figured that out yet.]]
-[[Like I said. I'm hungry.]]
-</tw-passagedata><tw-passagedata pid="78" name=" I haven't figured that out yet." tags="" position="2230.3333333333335,1540.6666666666667" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="79" name="Like I said. I'm hungry." tags="" position="2380.3333333333335,1539.6666666666667" size="100,100">FRIDGE:
- "And I'm starving. Really. If you keep taking my organs out, who knows 
-what'll happen? Give it a rest. Half the stuff in here is expired, 
-anyway."
+[[I don&#39;t know anymore.| I haven&#39;t figured that out yet.]]
+[[Like I said. I&#39;m hungry.]]
+</tw-passagedata><tw-passagedata pid="78" name=" I haven&#39;t figured that out yet." tags="" position="2230.3333333333335,1540.6666666666667" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="79" name="Like I said. I&#39;m hungry." tags="" position="2380.3333333333335,1539.6666666666667" size="100,100">FRIDGE: &quot;And I&#39;m starving. Really. If you keep taking my organs out, who knows what&#39;ll happen? Give it a rest. Half the stuff in here is expired, anyway.&quot;
 
 [[But...|Hello?]]
-</tw-passagedata><tw-passagedata pid="80" name="unnatural" tags="" position="264.66666666666663,3166.666666666667" size="100,100">Come to think of it, you've never seen a pigeon out this late at [[night.|Push the door]]</tw-passagedata><tw-passagedata pid="81" name="Lucky bird..." tags="" position="154.66666666666663,3165.666666666667" size="100,100">I'ts got a pizza slice the size of its body. Imagine that...
+</tw-passagedata><tw-passagedata pid="80" name="unnatural" tags="" position="264.66666666666663,3166.666666666667" size="100,100">Come to think of it, you&#39;ve never seen a pigeon out this late at [[night.|Push the door]]</tw-passagedata><tw-passagedata pid="81" name="Lucky bird..." tags="" position="154.66666666666663,3165.666666666667" size="100,100">I&#39;ts got a pizza slice the size of its body. Imagine that...
 
-You think about what it would be like to try to eat all that cheese as you [[continue on.|Hurry past it]]</tw-passagedata><tw-passagedata pid="82" name="Hurry past it" tags="" position="394.66666666666663,3164.666666666667" size="100,100">You side step the pigeon as you make your way home. Maybe it's time to call it a ni-
+You think about what it would be like to try to eat all that cheese as you [[continue on.|Hurry past it]]</tw-passagedata><tw-passagedata pid="82" name="Hurry past it" tags="" position="394.66666666666663,3164.666666666667" size="100,100">You side step the pigeon as you make your way home. Maybe it&#39;s time to call it a ni-
 
-"Jeez, watch where you're walking."
+&quot;Jeez, watch where you&#39;re walking.&quot;
 
 [[Turn around]]
-[[Keep moving]]</tw-passagedata><tw-passagedata pid="83" name="Turn around" tags="" position="322.66666666666663,3318.666666666667" size="100,100">You turn around, but don't see anyone. Just the streetlamp lighting up a circle of wet pavement on the corner.
+[[Keep moving]]</tw-passagedata><tw-passagedata pid="83" name="Turn around" tags="" position="322.66666666666663,3318.666666666667" size="100,100">You turn around, but don&#39;t see anyone. Just the streetlamp lighting up a circle of wet pavement on the corner.
 
-"Oh finally, someone in this city just... hears me out!"
+&quot;Oh finally, someone in this city just... hears me out!&quot;
 
 [[Look down]]
 
 </tw-passagedata><tw-passagedata pid="84" name="Keep moving" tags="" position="470.66666666666663,3314.666666666667" size="100,100">You hear a voice fading into the distance. 
 
-"Can't even eat in peace these days..."
+&quot;Can&#39;t even eat in peace these days...&quot;
 
 Whoever that was, you never saw.
 
@@ -728,58 +652,43 @@ Whoever that was, you never saw.
 
 It opens its little beak. Or at least you think it does, down there in the dark.
 
-Pigeon: "What a cute kid. I'm sorry for being so harsh. I'm just not used to this."
+Pigeon: &quot;What a cute kid. I&#39;m sorry for being so harsh. I&#39;m just not used to this.&quot;
 
 [[uh... me neither.]]
 [[run away]]</tw-passagedata><tw-passagedata pid="86" name="End" tags="" position="1370.3333333333335,1093.6666666666665" size="100,100">[[New Game]]
 
-[[Credits]]</tw-passagedata><tw-passagedata pid="87" name="New Game" tags="" position="1358,428" size="100,100">It's 4 AM. You're hungry. The sort of [[hungry]] that pokes at your sides and doesn't [[shut up]]. </tw-passagedata><tw-passagedata pid="88" name="uh... me neither." tags="" position="283.66666666666663,3618.666666666667" size="100,100">Pigeon:
- "This is a moment to celebrate, then!"
+[[Credits]]</tw-passagedata><tw-passagedata pid="87" name="New Game" tags="" position="1358,428" size="100,100">It&#39;s 4 AM. You&#39;re hungry. The sort of [[hungry]] that pokes at your sides and doesn&#39;t [[shut up]]. </tw-passagedata><tw-passagedata pid="88" name="uh... me neither." tags="" position="283.66666666666663,3618.666666666667" size="100,100">Pigeon: &quot;This is a moment to celebrate, then!&quot;
 
-With great effot, the pigeon starts to drag the half eaten slice towards
- you. It grates over grit and gravel and slides through the remnants of a
- puddle. He stops a few inches from your feet.
+With great effot, the pigeon starts to drag the half eaten slice towards you. It grates over grit and gravel and slides through the remnants of a puddle. He stops a few inches from your feet.
 
-Pigeon: "Please, take this meal as a token of my appreciation. Well 
-met!"
+Pigeon: &quot;Please, take this meal as a token of my appreciation. Well met!&quot;
 
 [[T-thank you...]]
 [[Um, I appreciate it, but no thanks.]]
-[[Woah, I am NOT eating that.]]</tw-passagedata><tw-passagedata pid="89" name="run away" tags="" position="492.66666666666663,3609.666666666667" size="100,100">If
- pigeons creeped you out before, this was... just too much.
+[[Woah, I am NOT eating that.]]</tw-passagedata><tw-passagedata pid="89" name="run away" tags="" position="492.66666666666663,3609.666666666667" size="100,100">If pigeons creeped you out before, this was... just too much.
 
-You can barely hear it call out before you round the bend, unlock the 
-apartment building door, and start slamming the elevator button a couple
- hundred times a second.
+You can barely hear it call out before you round the bend, unlock the apartment building door, and start slamming the elevator button a couple hundred times a second.
 
-[[Head to your rapartment|reflection]]</tw-passagedata><tw-passagedata pid="90" name="T-thank you..." tags="" position="73.66666666666663,3710.666666666667" size="100,100">You
- stoop down and carfully pick the slice off the ground. 
+[[Head to your rapartment|reflection]]</tw-passagedata><tw-passagedata pid="90" name="T-thank you..." tags="" position="73.66666666666663,3710.666666666667" size="100,100">You stoop down and carfully pick the slice off the ground. 
 
-It's been gnawed by more than a pigeon. The crust is soggy and 
-dissolving in some places, gravel clinging to the underside. The sauce 
-and cheese are cold, and a hair dangles off the edge facing you.
+It&#39;s been gnawed by more than a pigeon. The crust is soggy and dissolving in some places, gravel clinging to the underside. The sauce and cheese are cold, and a hair dangles off the edge facing you.
 
-It seems like the streetlamp has become a spotlight, and suddenly you 
-are intensely aware of the air, the cold stiffening your hands, your 
-breathing in and out, and time moving painfully... slowly...
+It seems like the streetlamp has become a spotlight, and suddenly you are intensely aware of the air, the cold stiffening your hands, your breathing in and out, and time moving painfully... slowly...
 
-[[Bon appetit...]]</tw-passagedata><tw-passagedata pid="91" name="Um, I appreciate it, but no thanks." tags="" position="243.66666666666663,3774.666666666667" size="100,100">Pigeon: "Oh, um, ... are you sure?"
+[[Bon appetit...]]</tw-passagedata><tw-passagedata pid="91" name="Um, I appreciate it, but no thanks." tags="" position="243.66666666666663,3774.666666666667" size="100,100">Pigeon: &quot;Oh, um, ... are you sure?&quot;
 
 His voice falters a little bit. He gives the pizza a slight nudge and looks at you expectantly.
 
 [[Yeah. No dice.|Woah, I am NOT eating that.]]
-[[You know what? Why not. Let's eat.|T-thank you...]]</tw-passagedata><tw-passagedata pid="92" name="Woah, I am NOT eating that." tags="" position="372.66666666666663,3765.666666666667" size="100,100">Pigeon: "..Oh, um ok."
+[[You know what? Why not. Let&#39;s eat.|T-thank you...]]</tw-passagedata><tw-passagedata pid="92" name="Woah, I am NOT eating that." tags="" position="372.66666666666663,3765.666666666667" size="100,100">Pigeon: &quot;..Oh, um ok.&quot;
 
-It looks sadder than you've ever seen a bird be.
+It looks sadder than you&#39;ve ever seen a bird be.
 
 [[I should be going.]]
-[[Actually, just kidding...|T-thank you...]]</tw-passagedata><tw-passagedata pid="93" name="I should be going." tags="" position="632.6666666666666,4345.666666666667" size="100,100">You rush away into the dark, hoping you won't hear whatever he has to say next.
+[[Actually, just kidding...|T-thank you...]]</tw-passagedata><tw-passagedata pid="93" name="I should be going." tags="" position="632.6666666666666,4345.666666666667" size="100,100">You rush away into the dark, hoping you won&#39;t hear whatever he has to say next.
 
 If there was ever a sign you should [[go to bed|reflection]], this was it.
-</tw-passagedata><tw-passagedata pid="94" name="Bon appetit..." tags="" position="0,3875.666666666667" size="100,100">You
- close your eyes and take a bite. It squelches in your mouth, and you 
-try to ignore all the textures as you swallow it quickly, whole. It 
-slides slowly down your throat.
+</tw-passagedata><tw-passagedata pid="94" name="Bon appetit..." tags="" position="0,3875.666666666667" size="100,100">You close your eyes and take a bite. It squelches in your mouth, and you try to ignore all the textures as you swallow it quickly, whole. It slides slowly down your throat.
 
 [[Keep it down]]</tw-passagedata><tw-passagedata pid="95" name="Keep it down" tags="" position="104,4019.666666666667" size="100,100">The pigeon hops about happily. 
 
@@ -789,28 +698,28 @@ slides slowly down your throat.
 
 [[It was lovely. Thank you.]]
 [[That was disgusting.]]
-</tw-passagedata><tw-passagedata pid="98" name="It was lovely. Thank you." tags="" position="541,4684.666666666667" size="100,100">Pigeon: "Well I believe we must be friends for life, now!"
+</tw-passagedata><tw-passagedata pid="98" name="It was lovely. Thank you." tags="" position="541,4684.666666666667" size="100,100">Pigeon: &quot;Well I believe we must be friends for life, now!&quot;
 
 You nod, still queasy.
 ...
 
-Pigeon: "I get a sense that you're tired. Well, I'll be off! Keep the rest of it! It's my gift!"
+Pigeon: &quot;I get a sense that you&#39;re tired. Well, I&#39;ll be off! Keep the rest of it! It&#39;s my gift!&quot;
 
 The pigeon flutters awkwardly away into the dark.
 
-[[It's definitely time to go home.|reflection]]</tw-passagedata><tw-passagedata pid="99" name="That was disgusting." tags="" position="512,4456.666666666667" size="100,100">Pigeon: "Disgusting? I..."
+[[It&#39;s definitely time to go home.|reflection]]</tw-passagedata><tw-passagedata pid="99" name="That was disgusting." tags="" position="512,4456.666666666667" size="100,100">Pigeon: &quot;Disgusting? I...&quot;
 
 The pigeon hops back, feathers ruffled around his neck. He slowly droops down.
 
-Pigeon: "I just thought we could've been pals..."
+Pigeon: &quot;I just thought we could&#39;ve been pals...&quot;
 
 
 [[I should be going.]]
-[[Wait! No! I mean, it's delicious!]]</tw-passagedata><tw-passagedata pid="100" name="Wait! No! I mean, it's delicious!" tags="" position="479,4306.666666666667" size="100,100">The pigeon looks at you with hope.
+[[Wait! No! I mean, it&#39;s delicious!]]</tw-passagedata><tw-passagedata pid="100" name="Wait! No! I mean, it&#39;s delicious!" tags="" position="479,4306.666666666667" size="100,100">The pigeon looks at you with hope.
 
-Pigeon: "Really? ... Ok, then have some more! Please!"
+Pigeon: &quot;Really? ... Ok, then have some more! Please!&quot;
 
-[[Bon appetit...]] </tw-passagedata><tw-passagedata pid="101" name="Credits" tags="" position="1335.3333333333335,1243.6666666666665" size="100,100">Hey! I'm Eva Khoury. I'm a multimedia artist, writer, and game dev!
+[[Bon appetit...]] </tw-passagedata><tw-passagedata pid="101" name="Credits" tags="" position="1335.3333333333335,1243.6666666666665" size="100,100">Hey! I&#39;m Eva Khoury. I&#39;m a multimedia artist, writer, and game dev!
 
 You can find me on twitter @e_v_a_khoury, or on my website, www.evakhoury.com </tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
@@ -823,7 +732,5 @@ null!=o&&Engine.play(o))}).appendTo(this.output),Wikifier.setValue(t,n),a.value=
 "function"==typeof prehistory[e]&&prehistory[e].call(this,e)},o),t||State.create(o.title),document.body.className&&(document.body.className=""),Object.keys(predisplay).forEach(function(e){"function"==typeof predisplay[e]&&predisplay[e].call(this,e)},o),Story.has("PassageReady"))try{n=Wikifier.wikifyEval(Story.get("PassageReady").text)}catch(e){console.error(e),Alert.error("PassageReady",e.message)}b=y.Rendering;var s=jQuery(o.render()),u=document.getElementById("passages");if(u.hasChildNodes()&&("number"==typeof Config.passages.transitionOut||"string"==typeof Config.passages.transitionOut&&""!==Config.passages.transitionOut&&""!==Config.transitionEndEventName?[].concat(_toConsumableArray(u.childNodes)).forEach(function(e){var t=jQuery(e);if(e.nodeType===Node.ELEMENT_NODE&&t.hasClass("passage")){if(t.hasClass("passage-out"))return;t.attr("id","out-"+t.attr("id")).addClass("passage-out"),"string"==typeof Config.passages.transitionOut?t.on(Config.transitionEndEventName,function(e){e.originalEvent.propertyName===Config.passages.transitionOut&&t.remove()}):setTimeout(function(){return t.remove()},Math.max(v,Config.passages.transitionOut))}else t.remove()}):jQuery(u).empty()),s.addClass("passage-in").appendTo(u),setTimeout(function(){return s.removeClass("passage-in")},v),Config.passages.displayTitles&&o.title!==Config.passages.start&&(document.title=o.title+" | "+Story.title),window.scroll(0,0),b=y.Playing,Story.has("PassageDone"))try{a=Wikifier.wikifyEval(Story.get("PassageDone").text)}catch(e){console.error(e),Alert.error("PassageDone",e.message)}if(jQuery.event.trigger({type:":passagedisplay",passage:o}),Object.keys(postdisplay).forEach(function(e){"function"==typeof postdisplay[e]&&postdisplay[e].call(this,e)},o),Config.ui.updateStoryElements&&UIBar.setStoryElements(),Config.debug){var l=void 0;null!=n&&(l=new DebugView(document.createDocumentFragment(),"special","PassageReady","PassageReady"),l.modes({hidden:!0}),l.append(n),s.prepend(l.output)),null!=a&&(l=new DebugView(document.createDocumentFragment(),"special","PassageDone","PassageDone"),l.modes({hidden:!0}),l.append(a),s.append(l.output)),1===State.turns&&null!=k&&s.prepend(k)}switch(w=Util.now(),g(),jQuery("#story").find("a[href]:not(.link-external)").addClass("link-external").end().find("a,link,button,input,select,textarea").not("[tabindex]").attr("tabindex",0),_typeof(Config.saves.autosave)){case"boolean":Config.saves.autosave&&Save.autosave.save();break;case"string":o.tags.includes(Config.saves.autosave)&&Save.autosave.save();break;case"object":Array.isArray(Config.saves.autosave)&&o.tags.some(function(e){return Config.saves.autosave.includes(e)})&&Save.autosave.save()}return jQuery.event.trigger({type:":passageend",passage:o}),b=y.Idle,s[0]}function h(e,t,r){var n=!1;switch(r){case undefined:break;case"replace":case"back":n=!0;break;default:throw new Error('Engine.display option parameter called with obsolete value "'+r+'"; please notify the developer')}p(e,n)}function g(){S.set("*:focus{outline:none}")}function m(){S.clear()}var y=Util.toEnum({Idle:"idle",Playing:"playing",Rendering:"rendering"}),v=40,b=y.Idle,w=null,k=null,S=null;return Object.freeze(Object.defineProperties({},{States:{value:y},minDomActionDelay:{value:v},init:{value:e},start:{value:t},restart:{value:r},state:{get:n},isIdle:{value:a},isPlaying:{value:i},isRendering:{value:o},lastPlay:{get:s},goTo:{value:u},go:{value:l},backward:{value:c},forward:{value:d},show:{value:f},play:{value:p},display:{value:h}}))}(),Passage=function(){var e=void 0;e=/^(?:debug|nobr|passage|widget|twine\..*)$/i;var t=function(){function t(r,n){var a=this;_classCallCheck(this,t),Object.defineProperties(this,{title:{value:Util.unescape(r)},element:{value:n||null},tags:{value:Object.freeze(n&&n.hasAttribute("tags")?n.getAttribute("tags").trim().splitOrEmpty(/\s+/).sort().filter(function(e,t,r){return 0===t||r[t-1]!==e}):[])},_excerpt:{writable:!0,value:null}}),Object.defineProperties(this,{domId:{value:"passage-"+Util.slugify(this.title)},classes:{value:Object.freeze(0===this.tags.length?[]:function(){return a.tags.filter(function(t){return!e.test(t)}).map(function(e){return Util.slugify(e)})}())}})}return _createClass(t,[{key:"description",value:function(){var e=Config.passages.descriptions;if(null!=e)switch("undefined"==typeof e?"undefined":_typeof(e)){case"boolean":if(e)return this.title;break;case"object":if(e instanceof Map&&e.has(this.title))return e.get(this.title);if(e.hasOwnProperty(this.title))return e[this.title];break;case"function":var r=e.call(this);if(r)return r;break;default:throw new TypeError("Config.passages.descriptions must be a boolean, object, or function")}return null===this._excerpt&&(this._excerpt=t.getExcerptFromText(this.text)),this._excerpt}},{key:"processText",value:function(){var e=this.text;return(Config.passages.nobr||this.tags.includes("nobr"))&&(e=e.replace(/^\n+|\n+$/g,"").replace(/\n+/g," ")),this.tags.includes("Twine.image")&&(e="[img["+e+"]]"),e}},{key:"render",value:function(){var e=this,r=this.tags.length>0?this.tags.join(" "):null,n=document.createElement("div");return jQuery(n).attr({id:this.domId,"data-passage":this.title,"data-tags":r}).addClass("passage "+this.className),jQuery(document.body).attr("data-tags",r).addClass(this.className),jQuery(document.documentElement).attr("data-tags",r),jQuery.event.trigger({type:":passagestart",content:n,passage:this}),Object.keys(prerender).forEach(function(t){"function"==typeof prerender[t]&&prerender[t].call(e,n,t)}),Story.has("PassageHeader")&&new Wikifier(n,Story.get("PassageHeader").processText()),new Wikifier(n,this.processText()),Story.has("PassageFooter")&&new Wikifier(n,Story.get("PassageFooter").processText()),jQuery.event.trigger({type:":passagerender",content:n,passage:this}),Object.keys(postrender).forEach(function(t){"function"==typeof postrender[t]&&postrender[t].call(e,n,t)}),this._excerpt=t.getExcerptFromNode(n),n}},{key:"className",get:function(){return this.classes.join(" ")}},{key:"text",get:function(){if(null==this.element){var e=Util.escape(this.title);return'<span class="error" title="'+e+'">'+L10n.get("errorTitle")+": "+L10n.get("errorNonexistentPassage",{passage:e})+"</span>"}return this.element.textContent.replace(/\r/g,"")}}],[{key:"getExcerptFromNode",value:function(e,t){if(!e.hasChildNodes())return"";var r=e.textContent.trim();if(""!==r){var n=new RegExp("(\\S+(?:\\s+\\S+){0,"+(t>0?t-1:7)+"})");r=r.replace(/\s+/g," ").match(n)}return r?r[1]+"…":"…"}},{key:"getExcerptFromText",value:function(e,t){if(""===e)return"";var r=new RegExp("(\\S+(?:\\s+\\S+){0,"+(t>0?t-1:7)+"})"),n=e.replace(/<<.*?>>/g," ").replace(/<.*?>/g," ").trim().replace(/^\s*\|.*\|.*?$/gm,"").replace(/\[[<>]?img\[[^\]]*\]\]/g,"").replace(/\[\[([^|\]]*)(?:|[^\]]*)?\]\]/g,"$1").replace(/^\s*!+(.*?)$/gm,"$1").replace(/'{2}|\/{2}|_{2}|@{2}/g,"").trim().replace(/\s+/g," ").match(r);return n?n[1]+"…":"…"}}]),t}();return t}(),Save=function(){function e(){if("cookie"===storage.name)return n(),Config.saves.autosave=undefined,Config.saves.slots=0,!1;Config.saves.slots=Math.max(0,Config.saves.slots),Number.isSafeInteger(Config.saves.slots)||(Config.saves.slots=8);var e=r(),t=!1;Array.isArray(e)&&(e={autosave:null,slots:e},t=!0),Config.saves.slots!==e.slots.length&&(Config.saves.slots<e.slots.length?(e.slots.reverse(),e.slots=e.slots.filter(function(e){return!(null===e&&this.count>0)||(--this.count,!1)},{count:e.slots.length-Config.saves.slots}),e.slots.reverse()):Config.saves.slots>e.slots.length&&x(e.slots,Config.saves.slots-e.slots.length),t=!0),O(e.autosave)&&(t=!0);for(var a=0;a<e.slots.length;++a)O(e.slots[a])&&(t=!0);return j(e)&&(storage.delete("saves"),t=!1),t&&C(e),P=e.slots.length-1,!0}function t(){return{autosave:null,slots:x([],Config.saves.slots)}}function r(){var e=storage.get("saves");return null===e?t():e}function n(){return storage.delete("saves"),!0}function a(){return i()||d()}function i(){return"cookie"!==storage.name&&"undefined"!=typeof Config.saves.autosave}function o(){var e=r();return null!==e.autosave}function s(){var e=r();return e.autosave}function u(){var e=r();return null!==e.autosave&&T(e.autosave)}function l(e,t){if("function"==typeof Config.saves.isAllowed&&!Config.saves.isAllowed())return!1;var n=r(),a={title:e||Story.get(State.passage).description(),date:Date.now()};return null!=t&&(a.metadata=t),n.autosave=A(a),C(n)}function c(){var e=r();return e.autosave=null,C(e)}function d(){return"cookie"!==storage.name&&P!==-1}function f(){return P+1}function p(){if(!d())return 0;for(var e=r(),t=0,n=0,a=e.slots.length;n<a;++n)null!==e.slots[n]&&++t;return t}function h(){return 0===p()}function g(e){if(e<0||e>P)return!1;var t=r();return!(e>=t.slots.length||null===t.slots[e])}function m(e){if(e<0||e>P)return null;var t=r();return e>=t.slots.length?null:t.slots[e]}function y(e){if(e<0||e>P)return!1;var t=r();return!(e>=t.slots.length||null===t.slots[e])&&T(t.slots[e])}function v(e,t,n){if("function"==typeof Config.saves.isAllowed&&!Config.saves.isAllowed())return UI.alert(L10n.get("savesDisallowed")),!1;if(e<0||e>P)return!1;var a=r();if(e>=a.slots.length)return!1;var i={title:t||Story.get(State.passage).description(),date:Date.now()};return null!=n&&(i.metadata=n),a.slots[e]=A(i),C(a)}function b(e){if(e<0||e>P)return!1;var t=r();return!(e>=t.slots.length)&&(t.slots[e]=null,C(t))}function w(e,t){function r(){var e=new Date,t=e.getMonth()+1,r=e.getDate(),n=e.getHours(),a=e.getMinutes(),i=e.getSeconds();return t<10&&(t="0"+t),r<10&&(r="0"+r),n<10&&(n="0"+n),a<10&&(a="0"+a),i<10&&(i="0"+i),""+e.getFullYear()+t+r+"-"+n+a+i}if("function"==typeof Config.saves.isAllowed&&!Config.saves.isAllowed())return void UI.alert(L10n.get("savesDisallowed"));var n=null==e?Story.domId:Util.slugify(e),a=n+"-"+r()+".save",i=null==t?{}:{metadata:t},o=LZString.compressToBase64(JSON.stringify(A(i)));saveAs(new Blob([o],{type:"text/plain;charset=UTF-8"}),a)}function k(e){var t=e.target.files[0],r=new FileReader;jQuery(r).on("load",function(e){var r=e.currentTarget;if(r.result){var n=void 0;try{n=JSON.parse(/\.json$/i.test(t.name)||/^\{/.test(r.result)?r.result:LZString.decompressFromBase64(r.result))}catch(e){}T(n)}}),r.readAsText(t)}function S(e){if("function"==typeof Config.saves.isAllowed&&!Config.saves.isAllowed())return UI.alert(L10n.get("savesDisallowed")),null;var t=null==e?{}:{metadata:e};return LZString.compressToBase64(JSON.stringify(A(t)))}function E(e){var t=void 0;try{t=JSON.parse(LZString.decompressFromBase64(e))}catch(e){}return T(t)?t.metadata:null}function x(e,t){for(var r=0;r<t;++r)e.push(null);return e}function j(e){for(var t=e.slots,r=!0,n=0,a=t.length;n<a;++n)if(null!==t[n]){r=!1;break}return null===e.autosave&&r}function C(e){return j(e)?(storage.delete("saves"),!0):storage.set("saves",e)}function O(e){if(null==e||"object"!==("undefined"==typeof e?"undefined":_typeof(e)))return!1;var t=!1;return e.hasOwnProperty("state")&&e.state.hasOwnProperty("delta")&&e.state.hasOwnProperty("index")||(e.hasOwnProperty("data")?(delete e.mode,e.state={delta:State.deltaEncode(e.data)},delete e.data):e.state.hasOwnProperty("delta")?e.state.hasOwnProperty("index")||delete e.state.mode:(delete e.state.mode,e.state.delta=State.deltaEncode(e.state.history),delete e.state.history),e.state.index=e.state.delta.length-1,t=!0),e.state.hasOwnProperty("rseed")&&(e.state.seed=e.state.rseed,delete e.state.rseed,e.state.delta.forEach(function(e,t,r){r[t].hasOwnProperty("rcount")&&(r[t].pull=r[t].rcount,delete r[t].rcount)}),t=!0),(e.state.hasOwnProperty("expired")&&"number"==typeof e.state.expired||e.state.hasOwnProperty("unique")||e.state.hasOwnProperty("last"))&&(e.state.hasOwnProperty("expired")&&"number"==typeof e.state.expired&&delete e.state.expired,(e.state.hasOwnProperty("unique")||e.state.hasOwnProperty("last"))&&(e.state.expired=[],e.state.hasOwnProperty("unique")&&(e.state.expired.push(e.state.unique),delete e.state.unique),e.state.hasOwnProperty("last")&&(e.state.expired.push(e.state.last),delete e.state.last)),t=!0),t}function A(e){if(null!=e&&"object"!==("undefined"==typeof e?"undefined":_typeof(e)))throw new Error("supplemental parameter must be an object");var t=Object.assign({},e,{id:Config.saves.id,state:State.marshalForSave()});return Config.saves.version&&(t.version=Config.saves.version),"function"==typeof Config.saves.onSave&&Config.saves.onSave(t),t.state.delta=State.deltaEncode(t.state.history),delete t.state.history,t}function T(e){try{if(O(e),!e||!e.hasOwnProperty("id")||!e.hasOwnProperty("state"))throw new Error(L10n.get("errorSaveMissingData"));if(e.state.history=State.deltaDecode(e.state.delta),delete e.state.delta,"function"==typeof Config.saves.onLoad&&Config.saves.onLoad(e),e.id!==Config.saves.id)throw new Error(L10n.get("errorSaveIdMismatch"));State.unmarshalForSave(e.state),Engine.show()}catch(e){return UI.alert(e.message.toUpperFirst()+".</p><p>"+L10n.get("aborting")+"."),!1}return!0}var P=-1;return Object.freeze(Object.defineProperties({},{init:{value:e},get:{value:r},clear:{value:n},ok:{value:a},autosave:{value:Object.freeze(Object.defineProperties({},{ok:{value:i},has:{value:o},get:{value:s},load:{value:u},save:{value:l},delete:{value:c}}))},slots:{value:Object.freeze(Object.defineProperties({},{ok:{value:d},length:{get:f},isEmpty:{value:h},count:{value:p},has:{value:g},get:{value:m},load:{value:y},save:{value:v},delete:{value:b}}))},export:{value:w},import:{value:k},serialize:{value:S},deserialize:{value:E}}))}(),Setting=function(){function e(){if(storage.has("options")){var e=storage.get("options");null!==e&&(window.SugarCube.settings=settings=Object.assign(t(),e)),r(),storage.delete("options")}n(),g.forEach(function(e){if(e.hasOwnProperty("onInit")){var t={name:e.name,value:settings[e.name],default:e.default};e.hasOwnProperty("list")&&(t.list=e.list),e.onInit.call(t)}})}function t(){return Object.create(null)}function r(){var e=t();return Object.keys(settings).length>0&&g.filter(function(e){return e.type!==m.Header&&settings[e.name]!==e.default}).forEach(function(t){return e[t.name]=settings[t.name]}),0===Object.keys(e).length?(storage.delete("settings"),!0):storage.set("settings",e)}function n(){var e=t(),r=storage.get("settings")||t();g.filter(function(e){return e.type!==m.Header}).forEach(function(t){return e[t.name]=t.default}),window.SugarCube.settings=settings=Object.assign(e,r)}function a(){return window.SugarCube.settings=settings=t(),storage.delete("settings"),!0}function i(e){if(0===arguments.length)a(),n();else{if(null==e||!f(e))throw new Error('nonexistent setting "'+e+'"');var t=p(e);t.type!==m.Header&&(settings[e]=t.default)}return r()}function o(e,t){g.forEach(e,t)}function s(e,t,r){if(arguments.length<3){var n=[];throw arguments.length<1&&n.push("type"),arguments.length<2&&n.push("name"),arguments.length<3&&n.push("definition"),new Error("missing parameters, no "+n.join(" or ")+" specified")}if("object"!==("undefined"==typeof r?"undefined":_typeof(r)))throw new TypeError("definition parameter must be an object");if(f(t))throw new Error('cannot clobber existing setting "'+t+'"');var a={type:e,name:t,label:null==r.label?"":String(r.label).trim()};switch(e){case m.Header:break;case m.Toggle:a.default=!!r.default;break;case m.List:if(!r.hasOwnProperty("list"))throw new Error("no list specified");if(!Array.isArray(r.list))throw new TypeError("list must be an array");if(0===r.list.length)throw new Error("list must not be empty");if(a.list=Object.freeze(r.list),null==r.default)a.default=r.list[0];else{var i=r.list.indexOf(r.default);if(i===-1)throw new Error("list does not contain default");a.default=r.list[i]}break;default:throw new Error("unknown Setting type: "+e)}"function"==typeof r.onInit&&(a.onInit=Object.freeze(r.onInit)),"function"==typeof r.onChange&&(a.onChange=Object.freeze(r.onChange)),g.push(Object.freeze(a))}function u(e,t){s(m.Header,e,{label:t})}function l(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];s.apply(undefined,[m.Toggle].concat(t))}function c(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];s.apply(undefined,[m.List].concat(t))}function d(){return 0===g.length}function f(e){return g.some(function(t){return t.name===e})}function p(e){return g.find(function(t){return t.name===e})}function h(e){f(e)&&delete settings[e];for(var t=0;t<g.length;++t)if(g[t].name===e){g.splice(t,1),h(e);break}}var g=[],m=Util.toEnum({Header:0,Toggle:1,List:2});return Object.freeze(Object.defineProperties({},{Types:{value:m},init:{value:e},create:{value:t},save:{value:r},load:{value:n},clear:{value:a},reset:{value:i},forEach:{value:o},add:{value:s},addHeader:{value:u},addToggle:{value:l},addList:{value:c},isEmpty:{value:d},has:{value:f},get:{value:p},delete:{value:h}}))}(),State=function(){function e(){session.delete("state"),I=[],L=c(),Q=-1,W=[],R=null===R?null:new PRNGWrapper(R.seed,!1)}function t(){if(session.has("state")){var e=session.get("state");return null!=e&&(n(e),!0)}return!1}function r(e){var t={index:Q};return e?t.history=clone(I):t.delta=T(I),W.length>0&&(t.expired=[].concat(_toConsumableArray(W))),null!==R&&(t.seed=R.seed),t}function n(e,t){if(null==e)throw new Error("state object is null or undefined");if(!e.hasOwnProperty(t?"history":"delta")||0===e[t?"history":"delta"].length)throw new Error("state object has no history or history is empty");if(!e.hasOwnProperty("index"))throw new Error("state object has no index");if(null!==R&&!e.hasOwnProperty("seed"))throw new Error("state object has no seed, but PRNG is enabled");if(null===R&&e.hasOwnProperty("seed"))throw new Error("state object has seed, but PRNG is disabled");I=t?clone(e.history):P(e.delta),Q=e.index,W=e.hasOwnProperty("expired")?[].concat(_toConsumableArray(e.expired)):[],e.hasOwnProperty("seed")&&(R.seed=e.seed),g(Q)}function a(){return r(!0)}function i(e){return n(e,!0)}function o(){return W}function s(){return W.length+y()}function u(){return W.concat(I.slice(0,y()).map(function(e){return e.title}))}function l(e){return null!=e&&""!==e&&(!!W.includes(e)||!!I.slice(0,y()).some(function(t){return t.title===e}))}function c(e,t){return{title:null==e?"":String(e),variables:null==t?{}:clone(t)}}function d(){return L}function f(){return Q}function p(){return L.title}function h(){return L.variables}function g(e){if(null==e)throw new Error("moment activation attempted with null or undefined");switch("undefined"==typeof e?"undefined":_typeof(e)){case"object":L=clone(e);break;case"number":if(b())throw new Error("moment activation attempted with index on empty history");if(e<0||e>=v())throw new RangeError("moment activation attempted with out-of-bounds index; need [0, "+(v()-1)+"], got "+e);L=clone(I[e]);break;default:throw new TypeError('moment activation attempted with a "'+("undefined"==typeof e?"undefined":_typeof(e))+'"; must be an object or valid history stack index')}return null!==R&&(R=PRNGWrapper.unmarshal({seed:R.seed,pull:L.pull})),session.set("state",r()),jQuery.event.trigger(":historyupdate"),L}function m(){return I}function y(){return Q+1}function v(){return I.length}function b(){return 0===I.length}function w(){return I.length>0?I[Q]:null}function k(){return I.length>0?I[I.length-1]:null}function S(){return I.length>0?I[0]:null}function E(e){return b()||e<0||e>Q?null:I[e]}function x(e){if(b())return null;var t=1+(e?Math.abs(e):0);return t>y()?null:I[y()-t]}function j(e){if(b()||null==e||""===e)return!1;for(var t=Q;t>=0;--t)if(I[t].title===e)return!0;return!1}function C(e){if(y()<v()&&I.splice(y(),v()-y()),I.push(c(e,L.variables)),R&&(k().pull=R.pull),Config.history.maxStates>0)for(;v()>Config.history.maxStates;)W.push(I.shift().title);return Q=v()-1,g(Q),y()}function O(e){return!(null==e||e<0||e>=v()||e===Q)&&(Q=e,g(Q),!0)}function A(e){return null!=e&&0!==e&&O(Q+e)}function T(e){if(!Array.isArray(e))return null;if(0===e.length)return[];for(var t=[clone(e[0])],r=1,n=e.length;r<n;++r)t.push(Diff.diff(e[r-1],e[r]));return t}function P(e){if(!Array.isArray(e))return null;if(0===e.length)return[];for(var t=[clone(e[0])],r=1,n=e.length;r<n;++r)t.push(Diff.patch(t[r-1],e[r]));return t}function _(e,t){if(!b()){var r=void 0;throw r="the Story JavaScript",new Error("State.initPRNG must be called during initialization, within either "+r+" or the StoryInit special passage")}R=new PRNGWrapper(e,t),L.pull=R.pull}function M(){return R?R.random():Math.random()}function N(){F={},TempVariables=F}function D(){return F}var I=[],L=c(),Q=-1,W=[],R=null,F={};return Object.freeze(Object.defineProperties({},{reset:{value:e},restore:{value:t},marshalForSave:{value:a},unmarshalForSave:{value:i},expired:{get:o},turns:{get:s},passages:{get:u},hasPlayed:{value:l},active:{get:d},activeIndex:{get:f},passage:{get:p},variables:{get:h},history:{get:m},length:{get:y},size:{get:v},isEmpty:{value:b},current:{get:w},top:{get:k},bottom:{get:S},index:{value:E},peek:{value:x},has:{value:j},create:{value:C},goTo:{value:O},go:{value:A},deltaEncode:{value:T},deltaDecode:{value:P},initPRNG:{value:_},random:{value:M},clearTemporary:{value:N},temporary:{get:D},restart:{value:function(){return Engine.restart()}},backward:{value:function(){return Engine.backward()}},forward:{value:function(){return Engine.forward()}},display:{value:function(){return Engine.display.apply(Engine,arguments)}},show:{value:function(){return Engine.show.apply(Engine,arguments)}},play:{value:function(){return Engine.play.apply(Engine,arguments)}}}))}(),Story=function(){function e(){function e(e){if(e.tags.includesAny(n))throw new Error('starting passage "'+e.title+'" contains illegal tags; invalid: "'+e.tags.filter(function(e){return n.includes(e)}).sort().join('", "')+'"')}function t(e){if(a.includes(e.title)&&e.tags.includesAny(n))throw new Error('special passage "'+e.title+'" contains illegal tags; invalid: "'+e.tags.filter(function(e){return n.includes(e)}).sort().join('", "')+'"')}var n=["widget"],a=["PassageDone","PassageFooter","PassageHeader","PassageReady","StoryAuthor","StoryBanner","StoryCaption","StoryInit","StoryMenu","StoryShare","StorySubtitle"];!function(){var n=jQuery("#store-area>tw-storydata"),a=n.attr("startnode")||"";Config.passages.start=null,Config.debug=/\bdebug\b/.test(n.attr("options")),n.children("style").each(function(e){d.push(new Passage("tw-user-style-"+e,this))}),n.children("script").each(function(e){f.push(new Passage("tw-user-script-"+e,this))}),n.children('tw-passagedata:not([tags~="Twine.private"],[tags~="annotation"])').each(function(){var r=jQuery(this),n=r.attr("pid")||"",i=new Passage(r.attr("name"),this);n===a&&""!==a?(Config.passages.start=i.title,e(i),c[i.title]=i):i.tags.includes("widget")?p.push(i):(t(i),c[i.title]=i)}),g=n.attr("ifid"),r(Util.unescape("SandWitching_Hour")),Config.saves.id=Story.domId}()}function t(){!function(){var e=document.createElement("style");new StyleWrapper(e).add(d.map(function(e){return e.text.trim()}).join("\n")),jQuery(e).appendTo(document.head).attr({id:"style-story",type:"text/css"})}();for(var e=0;e<f.length;++e)try{Scripting.evalJavaScript(f[e].text)}catch(t){console.error(t),Alert.error(f[e].title,"object"===("undefined"==typeof t?"undefined":_typeof(t))?t.message:t)}for(var t=0;t<p.length;++t)try{Wikifier.wikifyEval(p[t].processText())}catch(e){console.error(e),Alert.error(p[t].title,"object"===("undefined"==typeof e?"undefined":_typeof(e))?e.message:e)}}function r(e){if(null==e||""===e)throw new Error("story title cannot be null or empty");document.title=h=Util.unescape(e),m=Util.slugify(h)}function n(){return h}function a(){return m}function i(){return g}function o(e){var t="undefined"==typeof e?"undefined":_typeof(e);switch(t){case"number":case"string":var r=String(e);return c.hasOwnProperty(r);case"boolean":case"function":t="a "+t;break;case"undefined":break;default:t=null===e?"null":"an "+t}throw new TypeError("Story.has title parameter cannot be "+t)}function s(e){var t="undefined"==typeof e?"undefined":_typeof(e);switch(t){case"number":case"string":var r=String(e);return c.hasOwnProperty(r)?c[r]:new Passage(r||"(unknown)");case"boolean":case"function":t="a "+t;break;case"undefined":break;default:t=null===e?"null":"an "+t}throw new TypeError("Story.get title parameter cannot be "+t)}function u(e,t){for(var r=arguments.length>2&&arguments[2]!==undefined?arguments[2]:"title",n=Object.keys(c),a=[],i=0;i<n.length;++i){var o=c[n[i]];if(o.hasOwnProperty(e))switch(_typeof(o[e])){case"undefined":break;case"object":for(var s=0,u=o[e].length;s<u;++s)if(o[e][s]==t){a.push(o);break}break;default:o[e]==t&&a.push(o)}}return a.sort(function(e,t){return e[r]==t[r]?0:e[r]<t[r]?-1:1}),a}function l(e){var t=arguments.length>1&&arguments[1]!==undefined?arguments[1]:"title";if("function"!=typeof e)throw new Error("Story.lookupWith filter parameter must be a function");for(var r=Object.keys(c),n=[],a=0;a<r.length;++a){var i=c[r[a]];e(i)&&n.push(i)}return n.sort(function(e,r){return e[t]==r[t]?0:e[t]<r[t]?-1:1}),n}var c={},d=[],f=[],p=[],h="",g="",m="";return Object.freeze(Object.defineProperties({},{passages:{value:c},styles:{value:d},scripts:{value:f},widgets:{value:p},load:{value:e},init:{value:t},title:{get:n},domId:{get:a},ifId:{get:i},has:{value:o},get:{value:s},lookup:{value:u},lookupWith:{value:l}}))}(),UI=function(){function e(e,t){var r=t,n=Config.debug;Config.debug=!1;try{null==r&&(r=document.createElement("ul"));var a=document.createDocumentFragment();new Wikifier(a,Story.get(e).processText().trim());var i=[].concat(_toConsumableArray(a.querySelectorAll(".error"))).map(function(e){return e.textContent.replace(/^(?:(?:Uncaught\s+)?Error:\s+)+/,"")});if(i.length>0)throw new Error(i.join("; "));for(;a.hasChildNodes();){var o=a.firstChild;if(o.nodeType===Node.ELEMENT_NODE&&"A"===o.nodeName.toUpperCase()){var s=document.createElement("li");r.appendChild(s),s.appendChild(o)}else a.removeChild(o)}}finally{Config.debug=n}return r}function t(e){jQuery(Dialog.setup("Alert","alert")).append("<p>"+e+'</p><ul class="buttons">'+('<li><button id="alert-ok" class="ui-close">'+L10n.get(["alertOk","ok"])+"</button></li>")+"</ul>");for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];Dialog.open.apply(Dialog,r)}function r(){u(),Dialog.open.apply(Dialog,arguments)}function n(){l(),Dialog.open.apply(Dialog,arguments)}function a(){c(),Dialog.open.apply(Dialog,arguments)}function i(){d(),Dialog.open.apply(Dialog,arguments)}function o(){f(),Dialog.open.apply(Dialog,arguments)}function s(){return jQuery(Dialog.setup(L10n.get("autoloadTitle"),"autoload")).append("<p>"+L10n.get("autoloadPrompt")+'</p><ul class="buttons">'+('<li><button id="autoload-ok" class="ui-close">'+L10n.get(["autoloadOk","ok"])+"</button></li>")+('<li><button id="autoload-cancel" class="ui-close">'+L10n.get(["autoloadCancel","cancel"])+"</button></li>")+"</ul>"),jQuery(document).one("click.autoload",".ui-close",function(e){var t="autoload-ok"===e.target.id;jQuery(document).one(":dialogclose",function(){t&&Save.autosave.load()||Engine.play(Config.passages.start)})}),!0}function u(){var e=document.createElement("ul");jQuery(Dialog.setup(L10n.get("jumptoTitle"),"jumpto list")).append(e);for(var t=State.expired.length,r=State.size-1;r>=0;--r)if(r!==State.activeIndex){var n=Story.get(State.history[r].title);n&&n.tags.includes("bookmark")&&jQuery(document.createElement("li")).append(jQuery(document.createElement("a")).ariaClick({one:!0},function(e){return function(){return jQuery(document).one(":dialogclose",function(){return Engine.goTo(e)})}}(r)).addClass("ui-close").text(L10n.get("jumptoTurn")+" "+(t+r+1)+": "+n.description())).appendTo(e)}e.hasChildNodes()||jQuery(e).append("<li><a><em>"+L10n.get("jumptoUnavailable")+"</em></a></li>")}function l(){return jQuery(Dialog.setup(L10n.get("restartTitle"),"restart")).append("<p>"+L10n.get("restartPrompt")+'</p><ul class="buttons">'+('<li><button id="restart-ok">'+L10n.get(["restartOk","ok"])+"</button></li>")+('<li><button id="restart-cancel" class="ui-close">'+L10n.get(["restartCancel","cancel"])+"</button></li>")+"</ul>").find("#restart-ok").ariaClick({one:!0},function(){jQuery(document).one(":dialogclose",function(){return Engine.restart()}),Dialog.close()}),!0}function c(){function e(e,t,r,n){var a=jQuery(document.createElement("button")).attr("id","saves-"+e).html(r);return t&&a.addClass(t),n?a.ariaClick(n):a.prop("disabled",!0),jQuery(document.createElement("li")).append(a)}function r(){function e(e,t,r,n,a){var i=jQuery(document.createElement("button")).attr("id","saves-"+e+"-"+n).addClass(e).html(r);return t&&i.addClass(t),a?"auto"===n?i.ariaClick({label:r+" "+L10n.get("savesLabelAuto")},function(){return a()}):i.ariaClick({label:r+" "+L10n.get("savesLabelSlot")+" "+(n+1)},function(){return a(n)}):i.prop("disabled",!0),i}var t=Save.get(),r=jQuery(document.createElement("tbody"));if(Save.autosave.ok()){var n=jQuery(document.createElement("td")),a=jQuery(document.createElement("td")),i=jQuery(document.createElement("td")),o=jQuery(document.createElement("td"));jQuery(document.createElement("b")).attr({title:L10n.get("savesLabelAuto"),"aria-label":L10n.get("savesLabelAuto")}).text("A").appendTo(n),t.autosave?(a.append(e("load","ui-close",L10n.get("savesLabelLoad"),"auto",function(){jQuery(document).one(":dialogclose",function(){return Save.autosave.load()})})),jQuery(document.createElement("div")).text(t.autosave.title).appendTo(i),jQuery(document.createElement("div")).addClass("datestamp").html(t.autosave.date?L10n.get("savesSavedOn")+" "+new Date(t.autosave.date).toLocaleString():L10n.get("savesSavedOn")+" <em>"+L10n.get("savesUnknownDate")+"</em>").appendTo(i),o.append(e("delete",null,L10n.get("savesLabelDelete"),"auto",function(){Save.autosave.delete(),c()}))):(a.append(e("load",null,L10n.get("savesLabelLoad"),"auto")),jQuery(document.createElement("em")).text(L10n.get("savesEmptySlot")).appendTo(i),i.addClass("empty"),o.append(e("delete",null,L10n.get("savesLabelDelete"),"auto"))),jQuery(document.createElement("tr")).append(n).append(a).append(i).append(o).appendTo(r)}for(var s=0,u=t.slots.length;s<u;++s){var l=jQuery(document.createElement("td")),d=jQuery(document.createElement("td")),f=jQuery(document.createElement("td")),p=jQuery(document.createElement("td"));l.append(document.createTextNode(s+1)),t.slots[s]?(d.append(e("load","ui-close",L10n.get("savesLabelLoad"),s,function(e){jQuery(document).one(":dialogclose",function(){return Save.slots.load(e)})})),jQuery(document.createElement("div")).text(t.slots[s].title).appendTo(f),jQuery(document.createElement("div")).addClass("datestamp").html(t.slots[s].date?L10n.get("savesSavedOn")+" "+new Date(t.slots[s].date).toLocaleString():L10n.get("savesSavedOn")+" <em>"+L10n.get("savesUnknownDate")+"</em>").appendTo(f),p.append(e("delete",null,L10n.get("savesLabelDelete"),s,function(e){Save.slots.delete(e),c()}))):(d.append(e("save","ui-close",L10n.get("savesLabelSave"),s,Save.slots.save)),jQuery(document.createElement("em")).text(L10n.get("savesEmptySlot")).appendTo(f),f.addClass("empty"),p.append(e("delete",null,L10n.get("savesLabelDelete"),s))),jQuery(document.createElement("tr")).append(l).append(d).append(f).append(p).appendTo(r)}return jQuery(document.createElement("table")).attr("id","saves-list").append(r)}var n=jQuery(Dialog.setup(L10n.get("savesTitle"),"saves")),a=Save.ok();if(a&&n.append(r()),a||Has.fileAPI){var i=jQuery(document.createElement("ul")).addClass("buttons").appendTo(n);return Has.fileAPI&&(i.append(e("export","ui-close",L10n.get("savesLabelExport"),function(){return Save.export()})),i.append(e("import",null,L10n.get("savesLabelImport"),function(){return n.find("#saves-import-file").trigger("click")})),jQuery(document.createElement("input")).css({display:"block",visibility:"hidden",position:"fixed",left:"-9999px",top:"-9999px",width:"1px",height:"1px"}).attr({type:"file",id:"saves-import-file",tabindex:-1,"aria-hidden":!0}).on("change",function(e){jQuery(document).one(":dialogclose",function(){return Save.import(e)}),Dialog.close()}).appendTo(n)),a&&i.append(e("clear",null,L10n.get("savesLabelClear"),Save.autosave.has()||!Save.slots.isEmpty()?function(){
 Save.clear(),c()}:null)),!0}return t(L10n.get("savesIncapable")),!1}function d(){var e=jQuery(Dialog.setup(L10n.get("settingsTitle"),"settings"));return Setting.forEach(function(t){if(t.type===Setting.Types.Header){var r=t.name,n=Util.slugify(r),a=jQuery(document.createElement("div")),i=jQuery(document.createElement("h2")),o=jQuery(document.createElement("p"));return a.attr("id","header-body-"+n).append(i).append(o).appendTo(e),i.attr("id","header-heading-"+n).wiki(r),void o.attr("id","header-label-"+n).wiki(t.label)}var s=t.name,u=Util.slugify(s),l=jQuery(document.createElement("div")),c=jQuery(document.createElement("label")),d=jQuery(document.createElement("div")),f=void 0;switch(l.attr("id","setting-body-"+u).append(c).append(d).appendTo(e),c.attr({id:"setting-label-"+u,for:"setting-control-"+u}).wiki(t.label),null==settings[s]&&(settings[s]=t.default),t.type){case Setting.Types.Toggle:f=jQuery(document.createElement("button")),settings[s]?f.addClass("enabled").text(L10n.get("settingsOn")):f.text(L10n.get("settingsOff")),f.ariaClick(function(){settings[s]?(jQuery(this).removeClass("enabled").text(L10n.get("settingsOff")),settings[s]=!1):(jQuery(this).addClass("enabled").text(L10n.get("settingsOn")),settings[s]=!0),Setting.save(),t.hasOwnProperty("onChange")&&t.onChange.call({name:s,value:settings[s],default:t.default})});break;case Setting.Types.List:f=jQuery(document.createElement("select"));for(var p=0,h=t.list.length;p<h;++p)jQuery(document.createElement("option")).val(p).text(t.list[p]).appendTo(f);f.val(t.list.indexOf(settings[s])).attr("tabindex",0).on("change",function(){settings[s]=t.list[Number(this.value)],Setting.save(),t.hasOwnProperty("onChange")&&t.onChange.call({name:s,value:settings[s],default:t.default,list:t.list})})}f.attr("id","setting-control-"+u).appendTo(d)}),e.append('<ul class="buttons">'+('<li><button id="settings-ok" class="ui-close">'+L10n.get(["settingsOk","ok"])+"</button></li>")+('<li><button id="settings-reset">'+L10n.get("settingsReset")+"</button></li>")+"</ul>").find("#settings-reset").ariaClick({one:!0},function(){jQuery(document).one(":dialogclose",function(){Setting.reset(),window.location.reload()}),Dialog.close()}),!0}function f(){try{jQuery(Dialog.setup(L10n.get("shareTitle"),"share list")).append(e("StoryShare"))}catch(e){return console.error(e),Alert.error("StoryShare",e.message),!1}return!0}return Object.freeze(Object.defineProperties({},{assembleLinkList:{value:e},alert:{value:t},jumpto:{value:r},restart:{value:n},saves:{value:a},settings:{value:i},share:{value:o},buildAutoload:{value:s},buildJumpto:{value:u},buildRestart:{value:l},buildSaves:{value:c},buildSettings:{value:d},buildShare:{value:f},stow:{value:function(){return UIBar.stow()}},unstow:{value:function(){return UIBar.unstow()}},setStoryElements:{value:function(){return UIBar.setStoryElements()}},isOpen:{value:function(){return Dialog.isOpen.apply(Dialog,arguments)}},body:{value:function(){return Dialog.body()}},setup:{value:function(){return Dialog.setup.apply(Dialog,arguments)}},addClickHandler:{value:function(){return Dialog.addClickHandler.apply(Dialog,arguments)}},open:{value:function(){return Dialog.open.apply(Dialog,arguments)}},close:{value:function(){return Dialog.close.apply(Dialog,arguments)}},resize:{value:function(){return Dialog.resize()}},buildDialogAutoload:{value:s},buildDialogJumpto:{value:u},buildDialogRestart:{value:l},buildDialogSaves:{value:c},buildDialogSettings:{value:d},buildDialogShare:{value:f},buildLinkListFromPassage:{value:e}}))}(),UIBar=function(){function e(){o||document.getElementById("ui-bar")||(!function(){var e=L10n.get("uiBarToggle"),t=L10n.get("uiBarBackward"),r=L10n.get("uiBarJumpto"),n=L10n.get("uiBarForward");jQuery(document.createDocumentFragment()).append('<div id="ui-bar"><div id="ui-bar-tray">'+('<button id="ui-bar-toggle" tabindex="0" title="'+e+'" aria-label="'+e+'"></button>')+'<div id="ui-bar-history">'+('<button id="history-backward" tabindex="0" title="'+t+'" aria-label="'+t+'"></button>')+('<button id="history-jumpto" tabindex="0" title="'+r+'" aria-label="'+r+'"></button>')+('<button id="history-forward" tabindex="0" title="'+n+'" aria-label="'+n+'"></button>')+'</div></div><div id="ui-bar-body"><header id="title" role="banner"><div id="story-banner"></div><h1 id="story-title"></h1><div id="story-subtitle"></div><div id="story-title-separator"></div><p id="story-author"></p></header><div id="story-caption"></div><nav id="menu" role="navigation"><ul id="menu-story"></ul><ul id="menu-core">'+('<li id="menu-item-saves"><a tabindex="0">'+L10n.get("savesTitle")+"</a></li>")+('<li id="menu-item-settings"><a tabindex="0">'+L10n.get("settingsTitle")+"</a></li>")+('<li id="menu-item-restart"><a tabindex="0">'+L10n.get("restartTitle")+"</a></li>")+('<li id="menu-item-share"><a tabindex="0">'+L10n.get("shareTitle")+"</a></li>")+"</ul></nav></div></div>").insertBefore("#store-area")}(),jQuery(document).on(":historyupdate.ui-bar",function(e,t){return function(){e.prop("disabled",State.length<2),t.prop("disabled",State.length===State.size)}}(jQuery("#history-backward"),jQuery("#history-forward"))))}function t(){if(!o){var e=jQuery("#ui-bar");("boolean"==typeof Config.ui.stowBarInitially?Config.ui.stowBarInitially:jQuery(window).width()<=Config.ui.stowBarInitially)&&!function(){var t=jQuery(e).add("#story");t.addClass("no-transition"),e.addClass("stowed"),setTimeout(function(){return t.removeClass("no-transition")},Engine.minDomActionDelay)}(),jQuery("#ui-bar-toggle").ariaClick({label:L10n.get("uiBarToggle")},function(){return e.toggleClass("stowed")}),Config.history.controls?(jQuery("#history-backward").prop("disabled",State.length<2).ariaClick({label:L10n.get("uiBarBackward")},function(){return Engine.backward()}),Story.lookup("tags","bookmark").length>0?jQuery("#history-jumpto").ariaClick({label:L10n.get("uiBarJumpto")},function(){return UI.jumpto()}):jQuery("#history-jumpto").remove(),jQuery("#history-forward").prop("disabled",State.length===State.size).ariaClick({label:L10n.get("uiBarForward")},function(){return Engine.forward()})):jQuery("#ui-bar-history").remove(),jQuery("#story-title").text(Story.title),Story.has("StoryCaption")||jQuery("#story-caption").remove(),Story.has("StoryMenu")||jQuery("#menu-story").remove(),Config.ui.updateStoryElements||i(),Dialog.addClickHandler("#menu-item-saves a",null,UI.buildSaves).text(L10n.get("savesTitle")),Setting.isEmpty()?jQuery("#menu-item-settings").remove():Dialog.addClickHandler("#menu-item-settings a",null,UI.buildSettings).text(L10n.get("settingsTitle")),Dialog.addClickHandler("#menu-item-restart a",null,UI.buildRestart).text(L10n.get("restartTitle")),Story.has("StoryShare")?Dialog.addClickHandler("#menu-item-share a",null,UI.buildShare).text(L10n.get("shareTitle")):jQuery("#menu-item-share").remove()}}function r(){o||(jQuery(document).off(".ui-bar"),jQuery("#ui-bar").remove(),jQuery(document.head).find("#style-ui-bar").remove(),Config.ui.updateStoryElements=!1,o=!0)}function n(){o||jQuery("#ui-bar").addClass("stowed")}function a(){o||jQuery("#ui-bar").removeClass("stowed")}function i(){if(!o){setPageElement("story-banner","StoryBanner"),setPageElement("story-subtitle","StorySubtitle"),setPageElement("story-author","StoryAuthor"),setPageElement("story-caption","StoryCaption");var e=document.getElementById("menu-story");if(null!==e&&(jQuery(e).empty(),Story.has("StoryMenu")))try{UI.assembleLinkList("StoryMenu",e)}catch(e){console.error(e),Alert.error("StoryMenu",e.message)}}}var o=!1;return Object.freeze(Object.defineProperties({},{init:{value:e},start:{value:t},destroy:{value:r},stow:{value:n},unstow:{value:a},setStoryElements:{value:i}}))}(),LoadScreen=function(){function e(){jQuery(document).on("readystatechange.SugarCube",function(){o.size>0||("complete"===document.readyState?"loading"===jQuery(document.documentElement).attr("data-init")&&(Config.loadDelay>0?setTimeout(function(){0===o.size&&r()},Math.max(Engine.minDomActionDelay,Config.loadDelay)):r()):n())})}function t(){jQuery(document).off("readystatechange.SugarCube"),o.clear(),r()}function r(){jQuery(document.documentElement).removeAttr("data-init")}function n(){jQuery(document.documentElement).attr("data-init","loading")}function a(){return++s,o.add(s),n(),s}function i(e){if(null==e)throw new Error("LoadScreen.unlock called with a null or undefined ID");o.has(e)&&o.delete(e),0===o.size&&jQuery(document).trigger("readystatechange")}var o=new Set,s=0;return Object.freeze(Object.defineProperties({},{init:{value:e},clear:{value:t},hide:{value:r},show:{value:n},lock:{value:a},unlock:{value:i}}))}(),version=Object.freeze({title:"SugarCube",major:2,minor:21,patch:0,prerelease:null,build:8137,date:new Date("2017-12-05T14:45:09.718Z"),extensions:{},toString:function(){var e=this.prerelease?"-"+this.prerelease:"";return this.major+"."+this.minor+"."+this.patch+e+"+"+this.build},short:function(){var e=this.prerelease?"-"+this.prerelease:"";return this.title+" (v"+this.major+"."+this.minor+"."+this.patch+e+")"},long:function(){return this.title+" v"+this.toString()+" ("+this.date.toUTCString()+")"}}),TempState={},macros={},postdisplay={},postrender={},predisplay={},prehistory={},prerender={},session=null,settings={},setup={},storage=null,browser=Browser,config=Config,has=Has,History=State,state=State,tale=Story,TempVariables=State.temporary;window.SugarCube={},jQuery(function(){try{var e=LoadScreen.lock();LoadScreen.init(),document.normalize&&document.normalize(),Story.load(),storage=SimpleStore.create(Story.domId,!0),session=SimpleStore.create(Story.domId,!1),Dialog.init(),UIBar.init(),Engine.init(),Story.init(),L10n.init(),session.has("rcWarn")||"cookie"!==storage.name||(session.set("rcWarn",1),window.alert(L10n.get("warningNoWebStorage"))),Save.init(),Setting.init(),Macro.init(),Engine.start(),UIBar.start(),window.SugarCube={Browser:Browser,Config:Config,Dialog:Dialog,DebugView:DebugView,Engine:Engine,Has:Has,L10n:L10n,Macro:Macro,Passage:Passage,Save:Save,Scripting:Scripting,Setting:Setting,SimpleAudio:SimpleAudio,State:State,Story:Story,UI:UI,UIBar:UIBar,Util:Util,Wikifier:Wikifier,macros:macros,session:session,settings:settings,setup:setup,storage:storage,version:version},LoadScreen.unlock(e)}catch(e){return console.error(e),LoadScreen.clear(),Alert.fatal(null,e.message,e)}})}(window,window.document,jQuery);}
 	</script>
-
-
-<script defer="defer" src="index_data/htmlgame.js" type="text/javascript"></script>
-</body></html>
+</body>
+</html>
