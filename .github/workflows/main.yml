@@ -54,12 +54,12 @@ jobs:
           echo set-output name=HAS_WINDOWS_CREDS::${HAS_WINDOWS_CREDS}
         env:
           CERTIFICATE_WINDOWS_PFX: ${{ secrets.CERTIFICATE_WINDOWS_PFX }}
-#shifts i don't think it is
+#shifs i don't think it is
       - name: Check out Electron app template
         uses: actions/checkout@v2
         with:
           repository: rcalderking/electron-wrapper-template
-          ref: v1.1.0
+          ref: v1.1.1
           path: app
 
       - name: Set up Electron app environment
