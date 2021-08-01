@@ -54,7 +54,7 @@ jobs:
           echo set-output name=HAS_WINDOWS_CREDS::${HAS_WINDOWS_CREDS}
         env:
           CERTIFICATE_WINDOWS_PFX: ${{ secrets.CERTIFICATE_WINDOWS_PFX }}
-#shifts to my template
+#shifts i hope
       - name: Check out Electron app template
         uses: actions/checkout@v2
         with:
